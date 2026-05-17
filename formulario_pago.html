@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de pago para completar la compra en la tienda online.">
+    <title>Formulario de Pago | Tienda Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#EAE4DC] text-[#6E6A66] font-sans">
+    <!-- Navbar -->
+    <header class="bg-[#FAF8F5] text-[#3B302A] shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif">Tienda Online</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-[#B8ADA1]">Inicio</a></li>
+                    <li><a href="#" class="hover:text-[#B8ADA1]">Catálogo</a></li>
+                    <li><a href="#" class="hover:text-[#B8ADA1]">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulario de Pago -->
+    <main class="container mx-auto px-4 py-6">
+        <h2 class="text-xl font-serif mb-4">Formulario de Pago</h2>
+        <form class="space-y-8">
+            <!-- Paso 1: Datos personales -->
+            <fieldset class="border border-[#B8ADA1] rounded-lg p-4">
+                <legend class="text-lg font-serif">Paso 1: Datos personales</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Nombre completo" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="email" placeholder="Correo electrónico" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="tel" placeholder="Teléfono" class="border border-[#B8ADA1] rounded px-4 py-2">
+                </div>
+            </fieldset>
+
+            <!-- Paso 2: Dirección de entrega -->
+            <fieldset class="border border-[#B8ADA1] rounded-lg p-4">
+                <legend class="text-lg font-serif">Paso 2: Dirección de entrega</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Calle y número" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="text" placeholder="Ciudad" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="text" placeholder="Código postal" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="text" placeholder="País" class="border border-[#B8ADA1] rounded px-4 py-2">
+                </div>
+            </fieldset>
+
+            <!-- Paso 3: Pago con tarjeta -->
+            <fieldset class="border border-[#B8ADA1] rounded-lg p-4">
+                <legend class="text-lg font-serif">Paso 3: Pago con tarjeta</legend>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Número de tarjeta" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="text" placeholder="Fecha de vencimiento (MM/AA)" class="border border-[#B8ADA1] rounded px-4 py-2">
+                    <input type="text" placeholder="CVV" class="border border-[#B8ADA1] rounded px-4 py-2">
+                </div>
+            </fieldset>
+
+            <!-- Botón de enviar -->
+            <button type="submit" class="bg-[#B8ADA1] text-white px-6 py-2 rounded hover:bg-[#6E6A66]">Completar Pago</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#FAF8F5] text-[#3B302A] py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

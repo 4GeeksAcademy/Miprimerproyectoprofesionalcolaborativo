@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos premium de moda neutra y prendas básicas.">
+    <title>Catálogo | Tienda Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#EAE4DC] text-[#6E6A66] font-sans">
+    <!-- Navbar -->
+    <header class="bg-[#FAF8F5] text-[#3B302A] shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif">Tienda Online</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-[#B8ADA1]">Inicio</a></li>
+                    <li><a href="#" class="hover:text-[#B8ADA1]">Catálogo</a></li>
+                    <li><a href="#" class="hover:text-[#B8ADA1]">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Barra de filtros -->
+    <section class="container mx-auto px-4 py-6">
+        <h2 class="text-xl font-serif mb-4">Filtrar productos</h2>
+        <div class="flex space-x-4">
+            <select class="border border-[#B8ADA1] rounded px-4 py-2">
+                <option value="">Categoría</option>
+                <option value="camisas">Camisas</option>
+                <option value="pantalones">Pantalones</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+            <select class="border border-[#B8ADA1] rounded px-4 py-2">
+                <option value="">Talla</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Listado de productos -->
+    <main class="container mx-auto px-4 py-6">
+        <h2 class="text-xl font-serif mb-4">Productos</h2>
+        <div class="grid grid-cols-4 gap-6">
+            <!-- Camisas -->
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Camisa Arena" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Camisa Arena</h3>
+                <p class="text-sm mb-1">Categoría: Camisas | Talla: M</p>
+                <p class="text-sm">$95.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80" alt="Camisa Taupe" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Camisa Taupe</h3>
+                <p class="text-sm mb-1">Categoría: Camisas | Talla: L</p>
+                <p class="text-sm">$110.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Camisa Gris" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Camisa Gris</h3>
+                <p class="text-sm mb-1">Categoría: Camisas | Talla: S</p>
+                <p class="text-sm">$105.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a6c7fa0?auto=format&fit=crop&w=400&q=80" alt="Camisa Espresso" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Camisa Espresso</h3>
+                <p class="text-sm mb-1">Categoría: Camisas | Talla: XL</p>
+                <p class="text-sm">$115.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <!-- Pantalones -->
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Pantalón Arena" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Pantalón Arena</h3>
+                <p class="text-sm mb-1">Categoría: Pantalones | Talla: M</p>
+                <p class="text-sm">$130.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80" alt="Pantalón Taupe" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Pantalón Taupe</h3>
+                <p class="text-sm mb-1">Categoría: Pantalones | Talla: L</p>
+                <p class="text-sm">$140.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Pantalón Gris" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Pantalón Gris</h3>
+                <p class="text-sm mb-1">Categoría: Pantalones | Talla: S</p>
+                <p class="text-sm">$135.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a6c7fa0?auto=format&fit=crop&w=400&q=80" alt="Pantalón Espresso" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Pantalón Espresso</h3>
+                <p class="text-sm mb-1">Categoría: Pantalones | Talla: XL</p>
+                <p class="text-sm">$145.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <!-- Accesorios -->
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Bufanda Arena" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Bufanda Arena</h3>
+                <p class="text-sm mb-1">Categoría: Accesorios | Talla: Única</p>
+                <p class="text-sm">$60.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Cinturón Taupe" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Cinturón Taupe</h3>
+                <p class="text-sm mb-1">Categoría: Accesorios | Talla: M</p>
+                <p class="text-sm">$55.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80" alt="Gorra Gris" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Gorra Gris</h3>
+                <p class="text-sm mb-1">Categoría: Accesorios | Talla: Única</p>
+                <p class="text-sm">$45.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Bolso Espresso" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Bolso Espresso</h3>
+                <p class="text-sm mb-1">Categoría: Accesorios | Talla: Única</p>
+                <p class="text-sm">$150.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <!-- Más variedad de productos -->
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a6c7fa0?auto=format&fit=crop&w=400&q=80" alt="Sweater Blanco Roto" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Sweater Blanco Roto</h3>
+                <p class="text-sm mb-1">Categoría: Camisas | Talla: L</p>
+                <p class="text-sm">$125.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Chaleco Taupe" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Chaleco Taupe</h3>
+                <p class="text-sm mb-1">Categoría: Camisas | Talla: M</p>
+                <p class="text-sm">$135.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Pantalón Blanco Roto" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Pantalón Blanco Roto</h3>
+                <p class="text-sm mb-1">Categoría: Pantalones | Talla: S</p>
+                <p class="text-sm">$150.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80" alt="Bufanda Gris" class="w-full h-40 object-cover rounded">
+                <h3 class="text-lg font-serif mt-2">Bufanda Gris</h3>
+                <p class="text-sm mb-1">Categoría: Accesorios | Talla: Única</p>
+                <p class="text-sm">$65.00</p>
+                <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
+            </div>
+            <!-- Total: 20 productos variados -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#FAF8F5] text-[#3B302A] py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Tienda Online. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
