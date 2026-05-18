@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mon Panier | Maison Lumiere</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<style>
+		.font-editorial { font-family: "Cormorant Garamond", serif; }
+		.font-refined { font-family: "Manrope", sans-serif; }
+	</style>
+</head>
+<body class="bg-[#F9F8F6] text-[#1A1A1A] font-refined antialiased">
+	<header class="border-b border-[#E5E0D8] bg-[#F9F8F6]">
+		<nav class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-10" aria-label="Navegacion principal">
+			<a href="#" class="font-editorial text-2xl font-medium tracking-wide text-[#222222]">Maison Lumiere</a>
+
+			<form class="hidden w-full max-w-md md:block" role="search" aria-label="Buscar productos">
+				<label for="search" class="sr-only">Buscar</label>
+				<div class="flex items-center rounded-full border border-[#DDD7CC] bg-white px-4 py-2.5">
+					<svg class="h-4 w-4 text-[#7F7B74]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+						<circle cx="11" cy="11" r="7"></circle>
+						<path d="M20 20L16.65 16.65"></path>
+					</svg>
+					<input id="search" type="search" placeholder="Buscar en la coleccion" class="ml-3 w-full bg-transparent text-sm text-[#4B4945] placeholder:text-[#9A948A] focus:outline-none">
+				</div>
+			</form>
+
+			<div class="flex items-center gap-3 sm:gap-4">
+				<button type="button" class="rounded-full border border-[#E5E0D8] bg-white p-2.5 text-[#3E3C39] transition hover:border-[#CCC6BA]" aria-label="Cuenta">
+					<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+						<circle cx="12" cy="8" r="3.25"></circle>
+						<path d="M5.5 19.5C6.8 16.8 9.1 15.5 12 15.5C14.9 15.5 17.2 16.8 18.5 19.5"></path>
+					</svg>
+				</button>
+				<button type="button" class="relative rounded-full border border-[#E5E0D8] bg-white p-2.5 text-[#3E3C39] transition hover:border-[#CCC6BA]" aria-label="Carrito">
+					<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+						<path d="M3 5H5L7.1 14.2C7.3 15.1 8.1 15.8 9 15.8H17.2C18.1 15.8 18.8 15.2 19 14.4L20.3 8.8C20.5 7.9 19.8 7 18.9 7H6.2"></path>
+						<circle cx="9.4" cy="19" r="1.3"></circle>
+						<circle cx="17" cy="19" r="1.3"></circle>
+					</svg>
+					<span class="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[#222222] px-1 text-[10px] font-medium text-[#F9F8F6]">3</span>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+	<main class="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+		<section class="mb-8 sm:mb-10">
+			<p class="mb-3 text-xs uppercase tracking-[0.3em] text-[#8A857B]">Pagina 4</p>
+			<h1 class="font-editorial text-4xl font-medium leading-none tracking-wide text-[#1E1D1B] sm:text-5xl">Mon Panier</h1>
+		</section>
+
+		<div class="grid grid-cols-1 gap-7 md:grid-cols-3 lg:gap-10">
+			<section class="space-y-4 md:col-span-2" aria-label="Listado de productos en carrito">
+				<article class="rounded-2xl border border-[#E5E0D8] bg-white p-4 shadow-[0_10px_30px_rgba(38,34,28,0.04)] sm:p-5">
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-[120px_1fr] sm:gap-5">
+						<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="Camisa de lino marfil" class="h-36 w-full rounded-xl object-cover sm:h-32">
+						<div class="flex flex-col gap-4">
+							<div class="flex flex-wrap items-start justify-between gap-3">
+								<div>
+									<h2 class="font-editorial text-2xl leading-none tracking-wide">Camisa Lino Atelier</h2>
+									<p class="mt-2 text-sm font-light tracking-wide text-[#66625B]">Talla M · Color Marfil</p>
+									<p class="mt-1 text-sm text-[#4F4B45]">Precio unitario: 89,00 EUR</p>
+								</div>
+								<button type="button" class="text-sm font-light tracking-wide text-[#7A756C] transition hover:text-[#3E3A35]" aria-label="Eliminar Camisa Lino Atelier">Eliminar</button>
+							</div>
+							<div class="flex flex-wrap items-center justify-between gap-3">
+								<div class="inline-flex items-center rounded-full border border-[#D8D2C6] bg-[#FAF9F7]">
+									<button type="button" class="px-4 py-2 text-[#5A564F]" aria-label="Disminuir cantidad">-</button>
+									<span class="min-w-8 text-center text-sm font-medium text-[#2A2926]">1</span>
+									<button type="button" class="px-4 py-2 text-[#5A564F]" aria-label="Aumentar cantidad">+</button>
+								</div>
+								<p class="text-base font-medium tracking-wide text-[#23211F]">Total: 89,00 EUR</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="rounded-2xl border border-[#E5E0D8] bg-white p-4 shadow-[0_10px_30px_rgba(38,34,28,0.04)] sm:p-5">
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-[120px_1fr] sm:gap-5">
+						<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" alt="Pantalon sastre arena" class="h-36 w-full rounded-xl object-cover sm:h-32">
+						<div class="flex flex-col gap-4">
+							<div class="flex flex-wrap items-start justify-between gap-3">
+								<div>
+									<h2 class="font-editorial text-2xl leading-none tracking-wide">Pantalon Sastre Rive</h2>
+									<p class="mt-2 text-sm font-light tracking-wide text-[#66625B]">Talla 38 · Color Arena</p>
+									<p class="mt-1 text-sm text-[#4F4B45]">Precio unitario: 120,00 EUR</p>
+								</div>
+								<button type="button" class="text-sm font-light tracking-wide text-[#7A756C] transition hover:text-[#3E3A35]" aria-label="Eliminar Pantalon Sastre Rive">Eliminar</button>
+							</div>
+							<div class="flex flex-wrap items-center justify-between gap-3">
+								<div class="inline-flex items-center rounded-full border border-[#D8D2C6] bg-[#FAF9F7]">
+									<button type="button" class="px-4 py-2 text-[#5A564F]" aria-label="Disminuir cantidad">-</button>
+									<span class="min-w-8 text-center text-sm font-medium text-[#2A2926]">2</span>
+									<button type="button" class="px-4 py-2 text-[#5A564F]" aria-label="Aumentar cantidad">+</button>
+								</div>
+								<p class="text-base font-medium tracking-wide text-[#23211F]">Total: 240,00 EUR</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="rounded-2xl border border-[#E5E0D8] bg-white p-4 shadow-[0_10px_30px_rgba(38,34,28,0.04)] sm:p-5">
+					<div class="grid grid-cols-1 gap-4 sm:grid-cols-[120px_1fr] sm:gap-5">
+						<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80" alt="Abrigo de lana topo" class="h-36 w-full rounded-xl object-cover sm:h-32">
+						<div class="flex flex-col gap-4">
+							<div class="flex flex-wrap items-start justify-between gap-3">
+								<div>
+									<h2 class="font-editorial text-2xl leading-none tracking-wide">Abrigo Laine Signature</h2>
+									<p class="mt-2 text-sm font-light tracking-wide text-[#66625B]">Talla S · Color Taupe</p>
+									<p class="mt-1 text-sm text-[#4F4B45]">Precio unitario: 220,00 EUR</p>
+								</div>
+								<button type="button" class="text-sm font-light tracking-wide text-[#7A756C] transition hover:text-[#3E3A35]" aria-label="Eliminar Abrigo Laine Signature">Eliminar</button>
+							</div>
+							<div class="flex flex-wrap items-center justify-between gap-3">
+								<div class="inline-flex items-center rounded-full border border-[#D8D2C6] bg-[#FAF9F7]">
+									<button type="button" class="px-4 py-2 text-[#5A564F]" aria-label="Disminuir cantidad">-</button>
+									<span class="min-w-8 text-center text-sm font-medium text-[#2A2926]">1</span>
+									<button type="button" class="px-4 py-2 text-[#5A564F]" aria-label="Aumentar cantidad">+</button>
+								</div>
+								<p class="text-base font-medium tracking-wide text-[#23211F]">Total: 220,00 EUR</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<aside class="md:col-span-1" aria-label="Resumen de compra">
+				<div class="rounded-2xl border border-[#DDD7CC] bg-[#F4F1EA] p-6 md:sticky md:top-6">
+					<h2 class="font-editorial text-3xl tracking-wide text-[#1E1D1A]">Resumen</h2>
+
+					<dl class="mt-6 space-y-3 text-sm text-[#3F3B35]">
+						<div class="flex items-center justify-between border-b border-[#DDD7CC] pb-3">
+							<dt class="font-light tracking-wide">Subtotal</dt>
+							<dd class="font-medium">549,00 EUR</dd>
+						</div>
+						<div class="flex items-center justify-between border-b border-[#DDD7CC] pb-3">
+							<dt class="font-light tracking-wide">IVA estimado</dt>
+							<dd class="font-medium">115,29 EUR</dd>
+						</div>
+						<div class="flex items-center justify-between border-b border-[#DDD7CC] pb-3">
+							<dt class="font-light tracking-wide">Envio</dt>
+							<dd class="font-medium">Gratuito</dd>
+						</div>
+						<div class="flex items-center justify-between pt-1 text-base">
+							<dt class="tracking-wide text-[#21201E]">Total</dt>
+							<dd class="text-lg font-semibold text-[#1A1A1A]">664,29 EUR</dd>
+						</div>
+					</dl>
+
+					<button type="button" class="mt-7 w-full rounded-full bg-[#1F1E1B] px-6 py-3.5 text-center text-xs font-medium uppercase tracking-[0.22em] text-[#F9F8F6] transition hover:bg-[#35322F]">
+						Proceder al pago
+					</button>
+
+					<p class="mt-4 text-center text-xs font-light tracking-wide text-[#7A756C]">Pago seguro y cifrado</p>
+				</div>
+			</aside>
+		</div>
+	</main>
+
+	<footer class="mt-12 border-t border-[#E5E0D8] bg-white/80">
+		<div class="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-5 py-10 sm:px-8 md:grid-cols-3 lg:px-10">
+			<section aria-label="Categorias">
+				<h3 class="font-editorial text-2xl tracking-wide">Categorias</h3>
+				<ul class="mt-4 space-y-2 text-sm font-light tracking-wide text-[#57534D]">
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Calzado</a></li>
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Camisas</a></li>
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Pantalones</a></li>
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Accesorios</a></li>
+				</ul>
+			</section>
+
+			<section aria-label="Legal">
+				<h3 class="font-editorial text-2xl tracking-wide">Legal</h3>
+				<ul class="mt-4 space-y-2 text-sm font-light tracking-wide text-[#57534D]">
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Terminos y condiciones</a></li>
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Politica de privacidad</a></li>
+					<li><a href="#" class="transition hover:text-[#1E1D1B]">Sobre la marca</a></li>
+				</ul>
+			</section>
+
+			<section aria-label="Contacto">
+				<h3 class="font-editorial text-2xl tracking-wide">Contacto</h3>
+				<ul class="mt-4 space-y-2 text-sm font-light tracking-wide text-[#57534D]">
+					<li>Atencion Atelier: +34 900 123 987</li>
+					<li>bonjour@maisonlumiere.com</li>
+					<li>Madrid · Paris</li>
+				</ul>
+			</section>
+		</div>
+
+		<div class="border-t border-[#EDE9E2] px-5 py-4 text-center text-xs font-light tracking-wide text-[#7A756C] sm:px-8 lg:px-10">
+			Copyright 2026 Maison Lumiere. Tous droits reserves.
+		</div>
+	</footer>
+</body>
+</html>
