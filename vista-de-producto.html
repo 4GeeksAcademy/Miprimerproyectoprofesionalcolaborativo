@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vista de Producto</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Ajusta la ruta según la estructura del proyecto -->
+</head>
+<body>
+
+  <!-- ENCABEZADO: importado o copiado del componente compartido -->
+  <header>
+    <!-- nav común del proyecto -->
+  </header>
+
+  <main>
+
+    <!-- Breadcrumb / ruta de navegación -->
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../index.html">Inicio</a></li>
+        <li>Vista de Producto</li>
+      </ol>
+    </nav>
+
+    <!-- Galería de imágenes del producto -->
+    <section class="product-gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="sr-only">Galería del producto</h2>
+      <img src="" alt="" id="main-image" />
+      <div class="thumbnails">
+        <!-- miniaturas aquí -->
+      </div>
+    </section>
+
+    <!-- Información del producto -->
+    <section class="product-info" aria-labelledby="product-title">
+      <h1 id="product-title">Nombre del Producto</h1>
+      <p class="product-price">$0.00</p>
+      <p class="product-description">Descripción del producto.</p>
+
+      <!-- Variantes: talla, color, etc. -->
+      <div class="product-variants">
+        <!-- selectores aquí -->
+      </div>
+
+      <button type="button" class="btn-add-cart">Agregar al carrito</button>
+    </section>
+
+    <!-- Detalles y especificaciones -->
+    <section class="product-details" aria-labelledby="details-title">
+      <h2 id="details-title">Detalles del producto</h2>
+      <!-- tabla o lista de especificaciones -->
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- footer común del proyecto -->
+  </footer>
+
+  <script src="../js/view.js"></script>
+  <!-- Ajusta la ruta según la estructura del proyecto -->
+</body>
+</html>
