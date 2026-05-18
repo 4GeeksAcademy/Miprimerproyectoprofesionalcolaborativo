@@ -8,6 +8,61 @@
             name="description"
             content="VOILÀ: esenciales atemporales de moda de lujo para la vida moderna."
         />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Organization",
+                        "@id": "https://voila-maison.com/#organization",
+                        "name": "VOILÀ",
+                        "url": "https://voila-maison.com/",
+                        "logo": "https://voila-maison.com/images-logo/logo.webp",
+                        "description": "VOILÀ: esenciales atemporales de moda de lujo para la vida moderna.",
+                        "email": "support@voila-maison.com",
+                        "telephone": "+33 1 42 86 00 00",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "14 Rue de Turenne",
+                            "postalCode": "75004",
+                            "addressLocality": "Paris",
+                            "addressCountry": "FR"
+                        },
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "contactType": "customer support",
+                            "email": "support@voila-maison.com",
+                            "telephone": "+33 1 42 86 00 00",
+                            "availableLanguage": ["es", "en", "fr"]
+                        }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://voila-maison.com/#website",
+                        "url": "https://voila-maison.com/",
+                        "name": "VOILÀ",
+                        "description": "VOILÀ: esenciales atemporales de moda de lujo para la vida moderna.",
+                        "publisher": {
+                            "@id": "https://voila-maison.com/#organization"
+                        }
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://voila-maison.com/#webpage",
+                        "url": "https://voila-maison.com/",
+                        "name": "VOILÀ | Home",
+                        "inLanguage": "es",
+                        "isPartOf": {
+                            "@id": "https://voila-maison.com/#website"
+                        },
+                        "about": {
+                            "@id": "https://voila-maison.com/#organization"
+                        },
+                        "description": "VOILÀ: esenciales atemporales de moda de lujo para la vida moderna."
+                    }
+                ]
+            }
+        </script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +84,7 @@
                     class="shrink-0 transition-opacity duration-300 hover:opacity-80"
                     aria-label="VOILÀ Inicio"
                 >
-                    <img src="images-logo/logo.webp" alt="VOILÀ" class="h-10 w-auto object-contain lg:h-12" />
+                    <img src="images-logo/logo.webp" alt="VOILÀ" class="h-16 w-auto object-contain lg:h-20" />
                     
                 </a>
 
