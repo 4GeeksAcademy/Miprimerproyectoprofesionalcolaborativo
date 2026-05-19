@@ -1,0 +1,27 @@
+#hero-slide-1:checked ~ .hero-slides .hero-slide-1,
+#hero-slide-2:checked ~ .hero-slides .hero-slide-2,
+#hero-slide-3:checked ~ .hero-slides .hero-slide-3,
+#hero-slide-4:checked ~ .hero-slides .hero-slide-4 {
+    opacity: 1;
+}
+
+#hero-slide-1:checked ~ .hero-caption .hero-caption-1,
+#hero-slide-2:checked ~ .hero-caption .hero-caption-2,
+#hero-slide-3:checked ~ .hero-caption .hero-caption-3,
+#hero-slide-4:checked ~ .hero-caption .hero-caption-4 {
+    opacity: 1;
+}
+
+#hero-slide-1:checked ~ .hero-dots label[for="hero-slide-1"],
+#hero-slide-2:checked ~ .hero-dots label[for="hero-slide-2"],
+#hero-slide-3:checked ~ .hero-dots label[for="hero-slide-3"],
+#hero-slide-4:checked ~ .hero-dots label[for="hero-slide-4"] {
+    background-color: #faf8f5;
+}
+
+#hero-slide-1:checked ~ .hero-nav .hero-nav-1,
+#hero-slide-2:checked ~ .hero-nav .hero-nav-2,
+#hero-slide-3:checked ~ .hero-nav .hero-nav-3,
+#hero-slide-4:checked ~ .hero-nav .hero-nav-4 {
+    display: flex;
+}
