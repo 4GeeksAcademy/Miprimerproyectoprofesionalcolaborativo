@@ -84,7 +84,7 @@
                     class="shrink-0 transition-opacity duration-300 hover:opacity-80"
                     aria-label="VOILÀ Inicio"
                 >
-                    <img src="images-logo/logo.webp" alt="VOILÀ" class="h-16 w-auto object-contain lg:h-20" />
+                    <img src="images/logo.webp" alt="VOILÀ" class="h-16 w-auto object-contain lg:h-20" />
                     
                 </a>
 
@@ -184,11 +184,50 @@
                     </article>
 
                     <article class="relative min-h-[28rem] overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[40rem]">
-                        <img
-                            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1500&q=80"
-                            alt="Modelo con estilismo minimalista en tonos neutros"
-                            class="h-full w-full object-cover"
-                        />
+                        <div id="hero-campaign-carousel" class="relative h-full w-full" aria-label="Carrusel de campana 2026">
+                            <img
+                                src="images/campaña-2026/campaña-voila-vestido-negro-estructurado.webp"
+                                alt="Vestido negro estructurado de la campana VOILA 2026"
+                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700"
+                            />
+                            <img
+                                src="images/campaña-2026/campaña-voila-vestido-satinado.webp"
+                                alt="Vestido satinado de la campana VOILA 2026"
+                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                            />
+                            <img
+                                src="images/campaña-2026/coleccion-otoño-invierno.webp"
+                                alt="Look de coleccion otono invierno de VOILA"
+                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                            />
+                            <img
+                                src="images/campaña-2026/coleccion-primavera-verano.webp"
+                                alt="Look de coleccion primavera verano de VOILA"
+                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                            />
+
+                            <button
+                                type="button"
+                                class="hero-campaign-prev absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#FAF8F5]/60 bg-[#3B302A]/30 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/55"
+                                aria-label="Imagen anterior"
+                            >
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                    <path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button
+                                type="button"
+                                class="hero-campaign-next absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#FAF8F5]/60 bg-[#3B302A]/30 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/55"
+                                aria-label="Imagen siguiente"
+                            >
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                    <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+
+                            <div class="hero-campaign-dots absolute bottom-36 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 sm:bottom-28 lg:bottom-28" aria-label="Indicadores del carrusel"></div>
+                        </div>
+
                         <div class="absolute inset-0 bg-[#3B302A]/20"></div>
                         <div class="absolute bottom-0 left-0 right-0 border-t border-[#FAF8F5]/40 bg-[#3B302A]/35 p-6 text-[#FAF8F5] backdrop-blur-[1px] lg:p-8">
                             <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Campaign 2026</p>
@@ -202,7 +241,7 @@
                 <section
                     id="nueva-coleccion-hero"
                     aria-label="Nueva coleccion"
-                    class="mt-6 max-h-0 overflow-hidden border border-[#B8ADA1]/0 bg-[#FAF8F5] opacity-0 transition-all duration-500 peer-checked:max-h-[160rem] peer-checked:border-[#B8ADA1]/40 peer-checked:p-5 peer-checked:opacity-100"
+                    class="mt-6 hidden border border-[#B8ADA1]/40 bg-[#FAF8F5] p-4 opacity-100 peer-checked:block sm:p-5 lg:p-6"
                 >
                     <p class="font-[DM_Sans] text-[11px] uppercase tracking-[0.16em] text-[#6E6A66]">Nueva coleccion</p>
                     <p class="mt-2 font-[Cormorant_Garamond] text-3xl leading-none">Essentiels Printemps</p>
@@ -210,46 +249,64 @@
                         Una seleccion curada de siluetas ligeras, texturas nobles y tonos neutros para una elegancia cotidiana atemporal.
                     </p>
 
-                    <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" role="list" aria-label="Piezas de la nueva coleccion">
+                    <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="list" aria-label="Piezas de la nueva colección 2026">
                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=800&q=80" alt="Blazer ligero en lino natural de la nueva coleccion" class="h-full w-full object-cover" />
+                                <img src="images/campaña-2026/blusa-de-seda-negra.webp" alt="Blusa de seda negra de la nueva colección 2026" class="h-full w-full object-cover" />
                             </div>
                             <div class="p-4">
-                                <h3 class="font-[Cormorant_Garamond] text-2xl">Blue Lumiere</h3>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Vestidos</p>
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Blusa de Seda</h3>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Blusas</p>
                             </div>
                         </article>
 
                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80" alt="Vestido fluido en tono arena de la nueva coleccion" class="h-full w-full object-cover" />
+                                <img src="images/campaña-2026/camisa-minimalista-lino-convertido.webp" alt="Camisa minimalista de lino de la nueva colección 2026" class="h-full w-full object-cover" />
                             </div>
                             <div class="p-4">
-                                <h3 class="font-[Cormorant_Garamond] text-2xl">Robe Sable</h3>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Vestidos</p>
-                            </div>
-                        </article>
-
-                        <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
-                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Camisa blanca estructurada de la nueva coleccion" class="h-full w-full object-cover" />
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-[Cormorant_Garamond] text-2xl">Chemise Atelier</h3>
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Camisa Minimalista de Lino</h3>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Camisas</p>
                             </div>
                         </article>
 
                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1594633313593-bab3825d0caf?auto=format&fit=crop&w=800&q=80" alt="Pantalon de sastreria recta en tono vison de la nueva coleccion" class="h-full w-full object-cover" />
+                                <img src="images/campaña-2026/pantalon-wide-leg-lana.webp" alt="Pantalon wide leg de lana de la nueva colección 2026" class="h-full w-full object-cover" />
                             </div>
                             <div class="p-4">
-                                <h3 class="font-[Cormorant_Garamond] text-2xl">Tailleur Ligne</h3>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Bolsos</p>
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Pantalon Wide Leg de Lana</h3>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
                             </div>
                         </article>
+
+                        <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
+                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
+                                <img src="images/campaña-2026/pantalon-lino-relajado.webp" alt="Pantalon de lino relajado de la nueva colección 2026" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Pantalon de Lino Relajado</h3>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
+                            </div>
+                        </article>
+                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
+                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
+                                <img src="images/campaña-2026/botas-minimalistas.webp" alt="Botas minimalistas de la nueva colección 2026" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Botas Minimalistas</h3>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Calzado</p>
+                            </div>
+                        </article>
+                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
+                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
+                                <img src="images/campaña-2026/mocasines-premium.webp" alt="Mocasines premium de la nueva colección 2026" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Mocasines Premium</h3>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Calzado</p>
+                            </div>
+                        </article> 
                     </div>
                 </section>
             </section>
@@ -534,5 +591,81 @@
                 </p>
             </div>
         </footer>
+        <script>
+            (function () {
+                const carousel = document.getElementById("hero-campaign-carousel");
+                if (!carousel) return;
+
+                const slides = Array.from(carousel.querySelectorAll(".hero-campaign-slide"));
+                const prevBtn = carousel.querySelector(".hero-campaign-prev");
+                const nextBtn = carousel.querySelector(".hero-campaign-next");
+                const dotsContainer = carousel.querySelector(".hero-campaign-dots");
+                if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
+
+                let index = 0;
+                let intervalId;
+
+                const dots = slides.map((_, dotIndex) => {
+                    const dot = document.createElement("button");
+                    dot.type = "button";
+                    dot.className = "h-2.5 w-2.5 rounded-full border border-[#FAF8F5]/70 transition-all duration-300";
+                    dot.setAttribute("aria-label", `Ir a la imagen ${dotIndex + 1}`);
+                    dot.addEventListener("click", () => {
+                        index = dotIndex;
+                        render();
+                        restartAutoplay();
+                    });
+                    dotsContainer.appendChild(dot);
+                    return dot;
+                });
+
+                function render() {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle("opacity-100", i === index);
+                        slide.classList.toggle("opacity-0", i !== index);
+                    });
+
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle("bg-[#FAF8F5]", i === index);
+                        dot.classList.toggle("bg-transparent", i !== index);
+                    });
+                }
+
+                function goNext() {
+                    index = (index + 1) % slides.length;
+                    render();
+                }
+
+                function goPrev() {
+                    index = (index - 1 + slides.length) % slides.length;
+                    render();
+                }
+
+                function startAutoplay() {
+                    intervalId = setInterval(goNext, 5000);
+                }
+
+                function restartAutoplay() {
+                    clearInterval(intervalId);
+                    startAutoplay();
+                }
+
+                nextBtn.addEventListener("click", () => {
+                    goNext();
+                    restartAutoplay();
+                });
+
+                prevBtn.addEventListener("click", () => {
+                    goPrev();
+                    restartAutoplay();
+                });
+
+                carousel.addEventListener("mouseenter", () => clearInterval(intervalId));
+                carousel.addEventListener("mouseleave", startAutoplay);
+
+                render();
+                startAutoplay();
+            })();
+        </script>
     </body>
 </html>
