@@ -4,68 +4,87 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>VOILÀ | Vista de Producto</title>
+        <meta name="description" content="Vista de producto VOILÀ: esenciales atemporales de moda de lujo para la vida moderna." />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    </head>
-    <body class="bg-[#FAF8F5] text-[#3B302A]">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+        <style>
+            body { font-family: 'DM Sans', sans-serif; }
 
+            @keyframes fadeUp {
+                from { opacity: 0; transform: translateY(20px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+            .fade-up   { animation: fadeUp 0.6s ease forwards; }
+            .delay-1   { animation-delay: 0.1s; opacity: 0; }
+            .delay-2   { animation-delay: 0.25s; opacity: 0; }
+            .delay-3   { animation-delay: 0.4s; opacity: 0; }
+            .delay-4   { animation-delay: 0.55s; opacity: 0; }
+
+            /* Thumbnails */
+            .thumb { border: 2px solid transparent; transition: border-color 0.2s; }
+            .thumb.active { border-color: #3B302A; }
+
+            /* Tallas */
+            .talla-btn {
+                border: 1px solid rgba(184,173,161,0.7);
+                padding: 8px 16px;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 12px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                transition: background 0.2s, color 0.2s;
+                cursor: pointer;
+                background: transparent;
+                color: #3B302A;
+            }
+            .talla-btn:hover { background: #3B302A; color: #FAF8F5; }
+            .talla-btn.selected { background: #3B302A; color: #FAF8F5; }
+            .talla-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+            .talla-btn:disabled:hover { background: transparent; color: #3B302A; }
+
+            details summary::-webkit-details-marker { display: none; }
+        </style>
+    </head>
+
+    <body class="bg-[#FAF8F5] text-[#3B302A] min-h-screen flex flex-col">
+
+        <!-- ══════════════════════════════════
+             HEADER compartido del equipo
+        ══════════════════════════════════ -->
         <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
             <nav
                 class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 lg:px-10"
                 aria-label="Navegacion principal"
             >
-                <a
-                    href="#"
-                    class="shrink-0 transition-opacity duration-300 hover:opacity-80"
-                    aria-label="VOILÀ Inicio"
-                >
+                <a href="index.html" class="shrink-0 transition-opacity duration-300 hover:opacity-80" aria-label="VOILÀ Inicio">
                     <img src="images-logo/logo.webp" alt="VOILÀ" class="h-10 w-auto object-contain lg:h-12" />
-                    
                 </a>
 
-                                <ul class="hidden items-center gap-5 text-xs tracking-[0.08em] md:flex lg:gap-8 lg:text-sm" aria-label="Secciones del sitio">
-                    <li><a href="index.html" class="transition-colors duration-300 hover:text-[#6E6A66]" aria-current="page">Home</a></li>
-                      <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
-                    <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
+                <ul class="hidden items-center gap-5 text-xs tracking-[0.08em] md:flex lg:gap-8 lg:text-sm" aria-label="Secciones del sitio">
+                    <li><a href="index.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
+                    <li><a href="catalogo.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
+                    <li><a href="vista-de-producto.html" class="font-medium" aria-current="page">Vista de producto</a></li>
                     <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
-                    <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
+                    <li><a href="formulario_pago.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
                 </ul>
 
                 <div class="ml-auto hidden items-center gap-3 sm:gap-4 md:flex">
                     <label for="search" class="sr-only">Buscar productos</label>
-                    <input
-                        id="search"
-                        type="search"
-                        placeholder="Buscar"
+                    <input id="search" type="search" placeholder="Buscar"
                         class="w-24 border border-[#B8ADA1]/70 bg-transparent px-3 py-2 text-sm placeholder:text-[#6E6A66] focus:border-[#3B302A] focus:outline-none sm:w-36 md:w-44 lg:w-56"
-                        aria-label="Buscar en tienda"
-                    />
-                    <a
-                        href="#"
-                        class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#B8ADA1]/70 px-3 py-2 text-sm tracking-[0.06em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC]"
-                        aria-label="Mi cuenta"
-                    >
-                        Cuenta
-                    </a>
+                        aria-label="Buscar en tienda" />
+                    <a href="#" class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#B8ADA1]/70 px-3 py-2 text-sm tracking-[0.06em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC]" aria-label="Mi cuenta">Cuenta</a>
                 </div>
 
                 <div class="ml-auto flex items-center gap-3 md:hidden">
-                    <a
-                        href="#"
-                        class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#B8ADA1]/70 px-3 py-2 text-xs uppercase tracking-[0.08em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC]"
-                        aria-label="Mi cuenta"
-                    >
-                        Cuenta
-                    </a>
+                    <a href="#" class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#B8ADA1]/70 px-3 py-2 text-xs uppercase tracking-[0.08em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC]" aria-label="Mi cuenta">Cuenta</a>
                 </div>
             </nav>
 
             <details class="group border-t border-[#B8ADA1]/30 md:hidden">
-                <summary
-                    class="mx-auto flex w-full max-w-7xl cursor-pointer list-none items-center justify-between px-4 py-3 text-xs uppercase tracking-[0.12em] text-[#3B302A] sm:px-6"
-                    aria-label="Abrir menú de navegación"
-                >
+                <summary class="mx-auto flex w-full max-w-7xl cursor-pointer list-none items-center justify-between px-4 py-3 text-xs uppercase tracking-[0.12em] text-[#3B302A] sm:px-6" aria-label="Abrir menú de navegación">
                     Menú
                     <span class="relative h-4 w-5">
                         <span class="absolute left-0 top-0 h-px w-5 bg-[#3B302A] transition-all duration-300 group-open:top-1.5 group-open:rotate-45"></span>
@@ -73,37 +92,218 @@
                         <span class="absolute left-0 top-3 h-px w-5 bg-[#3B302A] transition-all duration-300 group-open:top-1.5 group-open:-rotate-45"></span>
                     </span>
                 </summary>
-
                 <div class="border-t border-[#B8ADA1]/30 bg-[#FAF8F5] px-4 pb-5 pt-4 sm:px-6">
                     <label for="search-mobile" class="sr-only">Buscar productos</label>
-                    <input
-                        id="search-mobile"
-                        type="search"
-                        placeholder="Buscar"
+                    <input id="search-mobile" type="search" placeholder="Buscar"
                         class="mb-4 w-full border border-[#B8ADA1]/70 bg-transparent px-3 py-2 text-sm placeholder:text-[#6E6A66] focus:border-[#3B302A] focus:outline-none"
-                        aria-label="Buscar en tienda"
-                    />
-
+                        aria-label="Buscar en tienda" />
                     <ul class="space-y-3 text-sm tracking-[0.08em]" aria-label="Secciones del sitio en mobile">
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
+                        <li><a href="index.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
+                        <li><a href="catalogo.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
+                        <li><a href="vista-de-producto.html" class="block border-b border-[#B8ADA1]/30 pb-2 font-medium">Vista de producto</a></li>
                         <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
+                        <li><a href="formulario_pago.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
                     </ul>
                 </div>
             </details>
         </header>
 
-        <!-- TU CONTENIDO VA ACÁ -->
-        <main>
-            <p>Vista de producto - en construcción</p>
+        <!-- ══════════════════════════════════
+             BREADCRUMB
+        ══════════════════════════════════ -->
+        <nav aria-label="Breadcrumb" class="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-10">
+            <ol class="flex items-center gap-2 text-xs tracking-[0.08em] text-[#6E6A66]">
+                <li><a href="index.html" class="hover:text-[#3B302A] transition-colors duration-200">Home</a></li>
+                <li aria-hidden="true">/</li>
+                <li><a href="catalogo.html" class="hover:text-[#3B302A] transition-colors duration-200">Catálogo</a></li>
+                <li aria-hidden="true">/</li>
+                <li class="text-[#3B302A]" aria-current="page">Camisa Atelier Linen</li>
+            </ol>
+        </nav>
+
+        <!-- ══════════════════════════════════
+             MAIN
+        ══════════════════════════════════ -->
+        <main class="flex-1" id="main-content">
+
+            <!-- ── SECCIÓN DOS COLUMNAS ── -->
+            <section
+                class="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-10"
+                aria-labelledby="nombre-producto"
+            >
+                <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+
+                    <!-- COLUMNA IZQUIERDA: foto (~mitad del ancho) -->
+                    <div class="fade-up delay-1">
+                        <!-- Imagen principal -->
+                        <div class="relative overflow-hidden bg-[#EAE4DC] aspect-[3/4] w-full">
+                            <img
+                                id="img-principal"
+                                src="images/campaña-2026/producto-principal.jpg"
+                                alt="Camisa Atelier Linen — vista frontal"
+                                class="h-full w-full object-cover transition-opacity duration-500"
+                                onerror="this.src='https://placehold.co/600x800/EAE4DC/3B302A?text=VOILÀ'"
+                            />
+                            <span class="absolute left-4 top-4 bg-[#3B302A] px-3 py-1 font-[DM_Sans] text-[10px] uppercase tracking-[0.14em] text-[#FAF8F5]">Nuevo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="mt-3 flex gap-2 overflow-x-auto pb-1" role="list" aria-label="Vistas del producto">
+                            <button
+                                onclick="cambiarImagen(this, 'images/campaña-2026/producto-principal.jpg', 'Vista frontal')"
+                                class="thumb active shrink-0 w-20 h-24 overflow-hidden"
+                                aria-label="Vista frontal" role="listitem">
+                                <img src="images/campaña-2026/producto-principal.jpg" alt="Vista frontal" class="h-full w-full object-cover"
+                                     onerror="this.src='https://placehold.co/80x96/EAE4DC/3B302A?text=1'" />
+                            </button>
+                            <button
+                                onclick="cambiarImagen(this, 'images/campaña-2026/producto-detalle.jpg', 'Vista detalle')"
+                                class="thumb shrink-0 w-20 h-24 overflow-hidden"
+                                aria-label="Vista detalle" role="listitem">
+                                <img src="images/campaña-2026/producto-detalle.jpg" alt="Vista detalle" class="h-full w-full object-cover"
+                                     onerror="this.src='https://placehold.co/80x96/EAE4DC/3B302A?text=2'" />
+                            </button>
+                            <button
+                                onclick="cambiarImagen(this, 'images/campaña-2026/producto-lateral.jpg', 'Vista lateral')"
+                                class="thumb shrink-0 w-20 h-24 overflow-hidden"
+                                aria-label="Vista lateral" role="listitem">
+                                <img src="images/campaña-2026/producto-lateral.jpg" alt="Vista lateral" class="h-full w-full object-cover"
+                                     onerror="this.src='https://placehold.co/80x96/EAE4DC/3B302A?text=3'" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: información principal del producto -->
+                    <div class="flex flex-col gap-6 lg:pt-2">
+
+                        <!-- Nombre + Código/referencia + Precio -->
+                        <div class="fade-up delay-2">
+                            <p class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66]">VOILÀ — Camisas</p>
+                            <h1 id="nombre-producto" class="mt-2 font-[Cormorant_Garamond] text-4xl font-light leading-tight sm:text-5xl">
+                                Camisa Atelier Linen
+                            </h1>
+                            <!-- Código o referencia -->
+                            <p class="mt-2 font-[DM_Sans] text-xs tracking-[0.12em] text-[#6E6A66]">REF. ATL-2026-001</p>
+                            <!-- Precio -->
+                            <p class="mt-5 font-[Cormorant_Garamond] text-3xl font-light">€ 285</p>
+                            <p class="mt-1 font-[DM_Sans] text-xs text-[#6E6A66]">Impuestos incluidos · Envío calculado al finalizar compra</p>
+                        </div>
+
+                        <!-- Talla -->
+                        <div class="fade-up delay-3">
+                            <div class="flex items-center justify-between mb-3">
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em]">
+                                    Talla: <span id="talla-label" class="font-medium">—</span>
+                                </p>
+                                <button class="font-[DM_Sans] text-xs text-[#6E6A66] underline underline-offset-2 hover:text-[#3B302A] transition-colors">
+                                    Guía de talles
+                                </button>
+                            </div>
+                            <div class="flex flex-wrap gap-2" role="radiogroup" aria-label="Seleccionar talla">
+                                <button onclick="seleccionarTalla(this, 'XS')" class="talla-btn">XS</button>
+                                <button onclick="seleccionarTalla(this, 'S')"  class="talla-btn">S</button>
+                                <button onclick="seleccionarTalla(this, 'M')"  class="talla-btn">M</button>
+                                <button onclick="seleccionarTalla(this, 'L')"  class="talla-btn">L</button>
+                                <button onclick="seleccionarTalla(this, 'XL')" class="talla-btn" disabled aria-disabled="true" title="Sin stock">XL</button>
+                            </div>
+                        </div>
+
+                        <!-- Selector de cantidad -->
+                        <div class="fade-up delay-3">
+                            <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] mb-3">Cantidad</p>
+                            <div class="flex items-center border border-[#B8ADA1]/70 w-fit" role="group" aria-label="Selector de cantidad">
+                                <button
+                                    onclick="cambiarCantidad(-1)"
+                                    class="px-4 py-3 font-[DM_Sans] text-base hover:bg-[#EAE4DC] transition-colors duration-200"
+                                    aria-label="Disminuir cantidad">−</button>
+                                <span
+                                    id="cantidad"
+                                    class="px-6 py-3 font-[DM_Sans] text-sm border-x border-[#B8ADA1]/70 min-w-[3.5rem] text-center"
+                                    aria-live="polite" aria-label="Cantidad seleccionada">1</span>
+                                <button
+                                    onclick="cambiarCantidad(1)"
+                                    class="px-4 py-3 font-[DM_Sans] text-base hover:bg-[#EAE4DC] transition-colors duration-200"
+                                    aria-label="Aumentar cantidad">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Botón Agregar al carrito -->
+                        <div class="fade-up delay-4 flex flex-col gap-3 sm:flex-row">
+                            <button
+                                class="flex-1 bg-[#3B302A] px-6 py-4 font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#FAF8F5] transition-colors duration-300 hover:bg-[#6E6A66] focus:outline-none focus:ring-2 focus:ring-[#3B302A] focus:ring-offset-2"
+                                aria-label="Agregar al carrito"
+                            >
+                                Agregar al carrito
+                            </button>
+                            <button
+                                class="border border-[#B8ADA1]/70 px-5 py-4 font-[DM_Sans] text-xs uppercase tracking-[0.14em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC] focus:outline-none focus:ring-2 focus:ring-[#3B302A] focus:ring-offset-2"
+                                aria-label="Guardar en favoritos"
+                            >
+                                ♡ Guardar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── SECCIÓN DESCRIPCIÓN DETALLADA (debajo de las dos columnas) ── -->
+            <section
+                class="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-10 border-t border-[#B8ADA1]/40 pt-14"
+                aria-labelledby="titulo-descripcion"
+            >
+                <h2 id="titulo-descripcion" class="font-[Cormorant_Garamond] text-3xl font-light mb-10 sm:text-4xl">
+                    Descripción detallada
+                </h2>
+
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+
+                    <!-- Materiales -->
+                    <div>
+                        <h3 class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#3B302A] mb-4 pb-3 border-b border-[#B8ADA1]/40">
+                            Materiales
+                        </h3>
+                        <p class="font-[Cormorant_Garamond] text-lg font-light leading-relaxed text-[#6E6A66]">
+                            Lino 100% europeo de gramaje medio, certificado OEKO-TEX®. Hilos de costura en algodón reforzado. Botones en nácar natural. El tejido gana suavidad y carácter con cada lavado, desarrollando una pátina única que refleja el paso del tiempo.
+                        </p>
+                        <ul class="mt-6 space-y-2 font-[DM_Sans] text-sm text-[#6E6A66]">
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> 100% Lino europeo certificado OEKO-TEX®</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Costura en algodón reforzado</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Botones en nácar natural</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Lavado a mano o máquina 30°C · Planchar en caliente</li>
+                        </ul>
+                    </div>
+
+                    <!-- Uso recomendado -->
+                    <div>
+                        <h3 class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#3B302A] mb-4 pb-3 border-b border-[#B8ADA1]/40">
+                            Uso recomendado
+                        </h3>
+                        <p class="font-[Cormorant_Garamond] text-lg font-light leading-relaxed text-[#6E6A66]">
+                            Diseñada para acompañar la vida moderna sin esfuerzo. Su corte relajado y tejido natural la hacen versátil en cualquier escenario donde la elegancia discreta sea el tono.
+                        </p>
+                        <ul class="mt-6 space-y-3 font-[DM_Sans] text-sm text-[#6E6A66]">
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Reuniones de trabajo con ambiente creativo o casual</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Salidas diurnas en clima cálido o templado</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Eventos al aire libre: mercados, galerías, terrazas</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Viajes donde se prioriza estilo sin equipaje voluminoso</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Cenas informales o noches de verano</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
         </main>
 
+        <!-- ══════════════════════════════════
+             FOOTER compartido del equipo
+        ══════════════════════════════════ -->
         <footer class="bg-[#3B302A] text-[#FAF8F5]" aria-label="Pie de pagina">
-                <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-10 lg:py-20">
+            <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-10 lg:py-20">
+
                 <section aria-labelledby="footer-categorias" class="space-y-4">
-                      <h2 id="footer-categorias" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Categorías</h2>
+                    <h2 id="footer-categorias" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Categorías</h2>
                     <ul class="space-y-4 font-[Cormorant_Garamond] text-xl leading-none sm:text-2xl">
                         <li>
                             <p>Calzado</p>
@@ -167,9 +367,34 @@
 
             <div class="border-t border-[#FAF8F5]/20 px-6 py-5 lg:px-10">
                 <p class="mx-auto w-full max-w-7xl font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#EAE4DC]">
-                      © 2026 VOILÀ. All rights reserved.
+                    © 2026 VOILÀ. All rights reserved.
                 </p>
             </div>
         </footer>
+
+        <script>
+            // Galería — cambio de imagen principal
+            function cambiarImagen(btn, src, alt) {
+                document.getElementById('img-principal').src = src;
+                document.getElementById('img-principal').alt = alt;
+                document.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
+                btn.classList.add('active');
+            }
+
+            // Selector de talla
+            function seleccionarTalla(btn, nombre) {
+                document.querySelectorAll('.talla-btn:not([disabled])').forEach(el => el.classList.remove('selected'));
+                btn.classList.add('selected');
+                document.getElementById('talla-label').textContent = nombre;
+            }
+
+            // Selector de cantidad
+            function cambiarCantidad(delta) {
+                const el = document.getElementById('cantidad');
+                const nueva = Math.max(1, parseInt(el.textContent) + delta);
+                el.textContent = nueva;
+            }
+        </script>
+
     </body>
 </html>
