@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>VOILÀ | Vista de Producto</title>
         <meta name="description" content="Vista de producto VOILÀ: esenciales atemporales de moda de lujo para la vida moderna." />
-        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -142,7 +142,6 @@
                                 src="images/campaña-2026/producto-principal.jpg"
                                 alt="Camisa Atelier Linen — vista frontal"
                                 class="h-full w-full object-cover transition-opacity duration-500"
-                                onerror="this.src='https://placehold.co/600x800/EAE4DC/3B302A?text=VOILÀ'"
                             />
                             <span class="absolute left-4 top-4 bg-[#3B302A] px-3 py-1 font-[DM_Sans] text-[10px] uppercase tracking-[0.14em] text-[#FAF8F5]">Nuevo</span>
                         </div>
@@ -150,25 +149,22 @@
                         <!-- Thumbnails -->
                         <div class="mt-3 flex gap-2 overflow-x-auto pb-1" role="list" aria-label="Vistas del producto">
                             <button
-                                onclick="cambiarImagen(this, 'images/campaña-2026/producto-principal.jpg', 'Vista frontal')"
                                 class="thumb active shrink-0 w-20 h-24 overflow-hidden"
                                 aria-label="Vista frontal" role="listitem">
                                 <img src="images/campaña-2026/producto-principal.jpg" alt="Vista frontal" class="h-full w-full object-cover"
-                                     onerror="this.src='https://placehold.co/80x96/EAE4DC/3B302A?text=1'" />
+                                     />
                             </button>
                             <button
-                                onclick="cambiarImagen(this, 'images/campaña-2026/producto-detalle.jpg', 'Vista detalle')"
                                 class="thumb shrink-0 w-20 h-24 overflow-hidden"
                                 aria-label="Vista detalle" role="listitem">
                                 <img src="images/campaña-2026/producto-detalle.jpg" alt="Vista detalle" class="h-full w-full object-cover"
-                                     onerror="this.src='https://placehold.co/80x96/EAE4DC/3B302A?text=2'" />
+                                     />
                             </button>
                             <button
-                                onclick="cambiarImagen(this, 'images/campaña-2026/producto-lateral.jpg', 'Vista lateral')"
                                 class="thumb shrink-0 w-20 h-24 overflow-hidden"
                                 aria-label="Vista lateral" role="listitem">
                                 <img src="images/campaña-2026/producto-lateral.jpg" alt="Vista lateral" class="h-full w-full object-cover"
-                                     onerror="this.src='https://placehold.co/80x96/EAE4DC/3B302A?text=3'" />
+                                     />
                             </button>
                         </div>
                     </div>
@@ -200,11 +196,11 @@
                                 </button>
                             </div>
                             <div class="flex flex-wrap gap-2" role="radiogroup" aria-label="Seleccionar talla">
-                                <button onclick="seleccionarTalla(this, 'XS')" class="talla-btn">XS</button>
-                                <button onclick="seleccionarTalla(this, 'S')"  class="talla-btn">S</button>
-                                <button onclick="seleccionarTalla(this, 'M')"  class="talla-btn">M</button>
-                                <button onclick="seleccionarTalla(this, 'L')"  class="talla-btn">L</button>
-                                <button onclick="seleccionarTalla(this, 'XL')" class="talla-btn" disabled aria-disabled="true" title="Sin stock">XL</button>
+                                <button class="talla-btn">XS</button>
+                                <button class="talla-btn">S</button>
+                                <button class="talla-btn">M</button>
+                                <button class="talla-btn">L</button>
+                                <button class="talla-btn" disabled aria-disabled="true" title="Sin stock">XL</button>
                             </div>
                         </div>
 
@@ -213,7 +209,6 @@
                             <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] mb-3">Cantidad</p>
                             <div class="flex items-center border border-[#B8ADA1]/70 w-fit" role="group" aria-label="Selector de cantidad">
                                 <button
-                                    onclick="cambiarCantidad(-1)"
                                     class="px-4 py-3 font-[DM_Sans] text-base hover:bg-[#EAE4DC] transition-colors duration-200"
                                     aria-label="Disminuir cantidad">−</button>
                                 <span
@@ -221,7 +216,6 @@
                                     class="px-6 py-3 font-[DM_Sans] text-sm border-x border-[#B8ADA1]/70 min-w-[3.5rem] text-center"
                                     aria-live="polite" aria-label="Cantidad seleccionada">1</span>
                                 <button
-                                    onclick="cambiarCantidad(1)"
                                     class="px-4 py-3 font-[DM_Sans] text-base hover:bg-[#EAE4DC] transition-colors duration-200"
                                     aria-label="Aumentar cantidad">+</button>
                             </div>
@@ -371,30 +365,6 @@
                 </p>
             </div>
         </footer>
-
-        <script>
-            // Galería — cambio de imagen principal
-            function cambiarImagen(btn, src, alt) {
-                document.getElementById('img-principal').src = src;
-                document.getElementById('img-principal').alt = alt;
-                document.querySelectorAll('.thumb').forEach(el => el.classList.remove('active'));
-                btn.classList.add('active');
-            }
-
-            // Selector de talla
-            function seleccionarTalla(btn, nombre) {
-                document.querySelectorAll('.talla-btn:not([disabled])').forEach(el => el.classList.remove('selected'));
-                btn.classList.add('selected');
-                document.getElementById('talla-label').textContent = nombre;
-            }
-
-            // Selector de cantidad
-            function cambiarCantidad(delta) {
-                const el = document.getElementById('cantidad');
-                const nueva = Math.max(1, parseInt(el.textContent) + delta);
-                el.textContent = nueva;
-            }
-        </script>
 
     </body>
 </html>
