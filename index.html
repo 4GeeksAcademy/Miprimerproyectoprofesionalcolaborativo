@@ -72,6 +72,35 @@
         />
 
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style>
+            #hero-slide-1:checked ~ .hero-slides .hero-slide-1,
+            #hero-slide-2:checked ~ .hero-slides .hero-slide-2,
+            #hero-slide-3:checked ~ .hero-slides .hero-slide-3,
+            #hero-slide-4:checked ~ .hero-slides .hero-slide-4 {
+                opacity: 1;
+            }
+
+            #hero-slide-1:checked ~ .hero-caption .hero-caption-1,
+            #hero-slide-2:checked ~ .hero-caption .hero-caption-2,
+            #hero-slide-3:checked ~ .hero-caption .hero-caption-3,
+            #hero-slide-4:checked ~ .hero-caption .hero-caption-4 {
+                opacity: 1;
+            }
+
+            #hero-slide-1:checked ~ .hero-dots label[for="hero-slide-1"],
+            #hero-slide-2:checked ~ .hero-dots label[for="hero-slide-2"],
+            #hero-slide-3:checked ~ .hero-dots label[for="hero-slide-3"],
+            #hero-slide-4:checked ~ .hero-dots label[for="hero-slide-4"] {
+                background-color: #faf8f5;
+            }
+
+            #hero-slide-1:checked ~ .hero-nav .hero-nav-1,
+            #hero-slide-2:checked ~ .hero-nav .hero-nav-2,
+            #hero-slide-3:checked ~ .hero-nav .hero-nav-3,
+            #hero-slide-4:checked ~ .hero-nav .hero-nav-4 {
+                display: flex;
+            }
+        </style>
     </head>
     <body class="bg-[#FAF8F5] text-[#3B302A] antialiased">
         <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
@@ -91,7 +120,7 @@
                                 <ul class="hidden items-center gap-5 text-xs tracking-[0.08em] md:flex lg:gap-8 lg:text-sm" aria-label="Secciones del sitio">
                     <li><a href="index.html" class="transition-colors duration-300 hover:text-[#6E6A66]" aria-current="page">Home</a></li>
                       <li><a href="catalogo.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
-                    <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
+                    <li><a href="vista-de-producto.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
                     <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
                     <li><a href="formulario_pago.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
                 </ul>
@@ -149,11 +178,11 @@
                     />
 
                     <ul class="space-y-3 text-sm tracking-[0.08em]" aria-label="Secciones del sitio en mobile">
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
+                        <li><a href="index.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
+                        <li><a href="catalogo.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
+                        <li><a href="vista-de-producto.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
                         <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
+                        <li><a href="formulario_pago.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
                     </ul>
                 </div>
             </details>
@@ -183,57 +212,97 @@
                         </div>
                     </article>
 
-                    <article class="relative min-h-[28rem] overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[40rem]">
-                        <div id="hero-campaign-carousel" class="relative h-full w-full" aria-label="Carrusel de campana 2026">
+                    <article class="relative min-h-[28rem] overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[40rem]" aria-label="Carrusel de campana 2026">
+                        <input id="hero-slide-1" name="hero-slide" type="radio" class="sr-only" checked />
+                        <input id="hero-slide-2" name="hero-slide" type="radio" class="sr-only" />
+                        <input id="hero-slide-3" name="hero-slide" type="radio" class="sr-only" />
+                        <input id="hero-slide-4" name="hero-slide" type="radio" class="sr-only" />
+
+                        <div class="hero-slides absolute inset-0">
                             <img
                                 src="images/campaña-2026/campaña-voila-vestido-negro-estructurado.webp"
                                 alt="Vestido negro estructurado de la campana VOILA 2026"
-                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700"
+                                class="hero-slide-1 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/campaña-voila-vestido-satinado.webp"
                                 alt="Vestido satinado de la campana VOILA 2026"
-                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-2 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/coleccion-otoño-invierno.webp"
                                 alt="Look de coleccion otono invierno de VOILA"
-                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-3 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/coleccion-primavera-verano.webp"
                                 alt="Look de coleccion primavera verano de VOILA"
-                                class="hero-campaign-slide absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-4 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
-
-                            <button
-                                type="button"
-                                class="hero-campaign-prev absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#FAF8F5]/60 bg-[#3B302A]/30 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/55"
-                                aria-label="Imagen anterior"
-                            >
-                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                                    <path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-                            <button
-                                type="button"
-                                class="hero-campaign-next absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#FAF8F5]/60 bg-[#3B302A]/30 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/55"
-                                aria-label="Imagen siguiente"
-                            >
-                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                                    <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-
-                            <div class="hero-campaign-dots absolute bottom-36 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 sm:bottom-28 lg:bottom-28" aria-label="Indicadores del carrusel"></div>
                         </div>
 
                         <div class="absolute inset-0 bg-[#3B302A]/20"></div>
-                        <div class="absolute bottom-0 left-0 right-0 border-t border-[#FAF8F5]/40 bg-[#3B302A]/35 p-6 text-[#FAF8F5] backdrop-blur-[1px] lg:p-8">
-                            <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Campaign 2026</p>
-                            <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">
-                                Quiet confidence in every detail.
-                            </p>
+
+                        <div class="hero-nav absolute inset-x-0 top-1/2 z-20 -translate-y-1/2">
+                            <div class="hero-nav-1 hidden items-center justify-between px-3">
+                                <label for="hero-slide-4" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen anterior">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                                <label for="hero-slide-2" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen siguiente">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                            </div>
+                            <div class="hero-nav-2 hidden items-center justify-between px-3">
+                                <label for="hero-slide-1" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen anterior">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                                <label for="hero-slide-3" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen siguiente">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                            </div>
+                            <div class="hero-nav-3 hidden items-center justify-between px-3">
+                                <label for="hero-slide-2" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen anterior">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                                <label for="hero-slide-4" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen siguiente">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                            </div>
+                            <div class="hero-nav-4 hidden items-center justify-between px-3">
+                                <label for="hero-slide-3" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen anterior">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                                <label for="hero-slide-1" class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#FAF8F5]/70 bg-[#3B302A]/35 text-[#FAF8F5] transition-colors duration-300 hover:bg-[#3B302A]/60" aria-label="Imagen siguiente">
+                                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="hero-caption absolute bottom-0 left-0 right-0 z-10 border-t border-[#FAF8F5]/40 bg-[#3B302A]/35 p-6 text-[#FAF8F5] backdrop-blur-[1px] lg:p-8">
+                            <div class="hero-caption-1 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">VOILÀ Campaign 2026</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Quiet confidence in every detail.</p>
+                            </div>
+                            <div class="hero-caption-2 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">VOILÀ Collection 2026</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">An intimate expression of modern femininity.</p>
+                            </div>
+                            <div class="hero-caption-3 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Otono Invierno</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Soft tailoring shaped for colder seasons.</p>
+                            </div>
+                            <div class="hero-caption-4 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Primavera Verano</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Natural textures illuminated by softness and light.</p>
+                            </div>
+                            <div class="pointer-events-none h-20 sm:h-16"></div>
+                        </div>
+
+                        <div class="hero-dots absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3" aria-label="Indicadores del carrusel">
+                            <label for="hero-slide-1" class="h-3 w-3 cursor-pointer rounded-full border border-[#FAF8F5]/80 bg-transparent transition-all duration-300" aria-label="Mostrar imagen 1"></label>
+                            <label for="hero-slide-2" class="h-3 w-3 cursor-pointer rounded-full border border-[#FAF8F5]/80 bg-transparent transition-all duration-300" aria-label="Mostrar imagen 2"></label>
+                            <label for="hero-slide-3" class="h-3 w-3 cursor-pointer rounded-full border border-[#FAF8F5]/80 bg-transparent transition-all duration-300" aria-label="Mostrar imagen 3"></label>
+                            <label for="hero-slide-4" class="h-3 w-3 cursor-pointer rounded-full border border-[#FAF8F5]/80 bg-transparent transition-all duration-300" aria-label="Mostrar imagen 4"></label>
                         </div>
                     </article>
                 </div>
@@ -591,81 +660,5 @@
                 </p>
             </div>
         </footer>
-        <script>
-            (function () {
-                const carousel = document.getElementById("hero-campaign-carousel");
-                if (!carousel) return;
-
-                const slides = Array.from(carousel.querySelectorAll(".hero-campaign-slide"));
-                const prevBtn = carousel.querySelector(".hero-campaign-prev");
-                const nextBtn = carousel.querySelector(".hero-campaign-next");
-                const dotsContainer = carousel.querySelector(".hero-campaign-dots");
-                if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
-
-                let index = 0;
-                let intervalId;
-
-                const dots = slides.map((_, dotIndex) => {
-                    const dot = document.createElement("button");
-                    dot.type = "button";
-                    dot.className = "h-2.5 w-2.5 rounded-full border border-[#FAF8F5]/70 transition-all duration-300";
-                    dot.setAttribute("aria-label", `Ir a la imagen ${dotIndex + 1}`);
-                    dot.addEventListener("click", () => {
-                        index = dotIndex;
-                        render();
-                        restartAutoplay();
-                    });
-                    dotsContainer.appendChild(dot);
-                    return dot;
-                });
-
-                function render() {
-                    slides.forEach((slide, i) => {
-                        slide.classList.toggle("opacity-100", i === index);
-                        slide.classList.toggle("opacity-0", i !== index);
-                    });
-
-                    dots.forEach((dot, i) => {
-                        dot.classList.toggle("bg-[#FAF8F5]", i === index);
-                        dot.classList.toggle("bg-transparent", i !== index);
-                    });
-                }
-
-                function goNext() {
-                    index = (index + 1) % slides.length;
-                    render();
-                }
-
-                function goPrev() {
-                    index = (index - 1 + slides.length) % slides.length;
-                    render();
-                }
-
-                function startAutoplay() {
-                    intervalId = setInterval(goNext, 5000);
-                }
-
-                function restartAutoplay() {
-                    clearInterval(intervalId);
-                    startAutoplay();
-                }
-
-                nextBtn.addEventListener("click", () => {
-                    goNext();
-                    restartAutoplay();
-                });
-
-                prevBtn.addEventListener("click", () => {
-                    goPrev();
-                    restartAutoplay();
-                });
-
-                carousel.addEventListener("mouseenter", () => clearInterval(intervalId));
-                carousel.addEventListener("mouseleave", startAutoplay);
-
-                render();
-                startAutoplay();
-            })();
-        </script>
     </body>
 </html>
