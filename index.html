@@ -8,6 +8,23 @@
             name="description"
             content="VOILÀ: esenciales atemporales de moda de lujo para la vida moderna."
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://voila-maison.com/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="VOILÀ | Home" />
+        <meta property="og:description" content="VOILÀ: esenciales atemporales de moda de lujo para la vida moderna." />
+        <meta property="og:url" content="https://voila-maison.com/" />
+        <meta property="og:image" content="https://voila-maison.com/images/logo.webp" />
+        <meta property="og:site_name" content="VOILÀ" />
+        <meta property="og:locale" content="es_ES" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="VOILÀ | Home" />
+        <meta name="twitter:description" content="VOILÀ: esenciales atemporales de moda de lujo para la vida moderna." />
+        <meta name="twitter:image" content="https://voila-maison.com/images/logo.webp" />
+        <meta name="twitter:site" content="@voilamaison" />
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -34,7 +51,40 @@
                             "email": "support@voila-maison.com",
                             "telephone": "+33 1 42 86 00 00",
                             "availableLanguage": ["es", "en", "fr"]
-                        }
+                        },
+                        "sameAs": [
+                            "https://x.com/voilamaison",
+                            "https://www.instagram.com/voilamaison",
+                            "https://www.tiktok.com/@voilamaison",
+                            "https://www.facebook.com/voilamaison",
+                            "https://www.pinterest.com/voilamaison"
+                        ]
+                    },
+                    {
+                        "@type": "LocalBusiness",
+                        "@id": "https://voila-maison.com/#localbusiness",
+                        "name": "VOILÀ",
+                        "url": "https://voila-maison.com/",
+                        "image": "https://voila-maison.com/images/logo.webp",
+                        "description": "VOILÀ: esenciales atemporales de moda de lujo para la vida moderna.",
+                        "telephone": "+33 1 42 86 00 00",
+                        "email": "support@voila-maison.com",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "14 Rue de Turenne",
+                            "postalCode": "75004",
+                            "addressLocality": "Paris",
+                            "addressRegion": "Ile-de-France",
+                            "addressCountry": "FR"
+                        },
+                        "areaServed": "FR",
+                        "sameAs": [
+                            "https://x.com/voilamaison",
+                            "https://www.instagram.com/voilamaison",
+                            "https://www.tiktok.com/@voilamaison",
+                            "https://www.facebook.com/voilamaison",
+                            "https://www.pinterest.com/voilamaison"
+                        ]
                     },
                     {
                         "@type": "WebSite",
@@ -72,41 +122,13 @@
         />
 
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <style>
-            #hero-slide-1:checked ~ .hero-slides .hero-slide-1,
-            #hero-slide-2:checked ~ .hero-slides .hero-slide-2,
-            #hero-slide-3:checked ~ .hero-slides .hero-slide-3,
-            #hero-slide-4:checked ~ .hero-slides .hero-slide-4 {
-                opacity: 1;
-            }
-
-            #hero-slide-1:checked ~ .hero-caption .hero-caption-1,
-            #hero-slide-2:checked ~ .hero-caption .hero-caption-2,
-            #hero-slide-3:checked ~ .hero-caption .hero-caption-3,
-            #hero-slide-4:checked ~ .hero-caption .hero-caption-4 {
-                opacity: 1;
-            }
-
-            #hero-slide-1:checked ~ .hero-dots label[for="hero-slide-1"],
-            #hero-slide-2:checked ~ .hero-dots label[for="hero-slide-2"],
-            #hero-slide-3:checked ~ .hero-dots label[for="hero-slide-3"],
-            #hero-slide-4:checked ~ .hero-dots label[for="hero-slide-4"] {
-                background-color: #faf8f5;
-            }
-
-            #hero-slide-1:checked ~ .hero-nav .hero-nav-1,
-            #hero-slide-2:checked ~ .hero-nav .hero-nav-2,
-            #hero-slide-3:checked ~ .hero-nav .hero-nav-3,
-            #hero-slide-4:checked ~ .hero-nav .hero-nav-4 {
-                display: flex;
-            }
-        </style>
+        <link rel="stylesheet" href="styles-home.css" />
     </head>
     <body class="bg-[#FAF8F5] text-[#3B302A] antialiased">
         <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
             <nav
                 class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 lg:px-10"
-                aria-label="Navegacion principal"
+                aria-label="Navegación principal"
             >
                 <a
                     href="#"
@@ -177,7 +199,7 @@
                         aria-label="Buscar en tienda"
                     />
 
-                    <ul class="space-y-3 text-sm tracking-[0.08em]" aria-label="Secciones del sitio en mobile">
+                    <ul class="space-y-3 text-sm tracking-[0.08em]" aria-label="Secciones del sitio en móvil">
                         <li><a href="index.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
                         <li><a href="catalogo.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
                         <li><a href="vista-de-producto.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Vista de producto</a></li>
@@ -199,7 +221,7 @@
                                 Timeless essentials designed for modern living.
                             </h1>
                             <p class="max-w-md font-[DM_Sans] text-sm leading-relaxed text-[#6E6A66] sm:text-base">
-                                Siluetas depuradas, materiales nobles y una actitud silenciosamente sofisticada. Una coleccion pensada para vestir la vida cotidiana con precision y calma.
+                                Siluetas depuradas, materiales nobles y una actitud silenciosamente sofisticada. Una colección pensada para vestir la vida cotidiana con precisión y calma.
                             </p>
                         </div>
                         <div class="mt-10">
@@ -207,12 +229,12 @@
                                 for="toggle-coleccion-hero"
                                 class="inline-flex cursor-pointer items-center border border-[#3B302A] px-8 py-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em] transition-colors duration-300 hover:bg-[#3B302A] hover:text-[#FAF8F5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B302A]"
                             >
-                                Ver coleccion
+                                Ver colección
                             </label>
                         </div>
                     </article>
 
-                    <article class="relative min-h-[28rem] overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[40rem]" aria-label="Carrusel de campana 2026">
+                    <article class="relative min-h-[28rem] overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[40rem]" aria-label="Carrusel de campaña 2026">
                         <input id="hero-slide-1" name="hero-slide" type="radio" class="sr-only" checked />
                         <input id="hero-slide-2" name="hero-slide" type="radio" class="sr-only" />
                         <input id="hero-slide-3" name="hero-slide" type="radio" class="sr-only" />
@@ -221,22 +243,22 @@
                         <div class="hero-slides absolute inset-0">
                             <img
                                 src="images/campaña-2026/campaña-voila-vestido-negro-estructurado.webp"
-                                alt="Vestido negro estructurado de la campana VOILA 2026"
+                                alt="Vestido negro estructurado de la campaña VOILÀ 2026"
                                 class="hero-slide-1 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/campaña-voila-vestido-satinado.webp"
-                                alt="Vestido satinado de la campana VOILA 2026"
+                                alt="Vestido satinado de la campaña VOILÀ 2026"
                                 class="hero-slide-2 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/coleccion-otoño-invierno.webp"
-                                alt="Look de coleccion otono invierno de VOILA"
+                                alt="Look de colección otoño-invierno de VOILÀ"
                                 class="hero-slide-3 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/coleccion-primavera-verano.webp"
-                                alt="Look de coleccion primavera verano de VOILA"
+                                alt="Look de colección primavera-verano de VOILÀ"
                                 class="hero-slide-4 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
                             />
                         </div>
@@ -288,7 +310,7 @@
                                 <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">An intimate expression of modern femininity.</p>
                             </div>
                             <div class="hero-caption-3 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Otono Invierno</p>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Otoño Invierno</p>
                                 <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Soft tailoring shaped for colder seasons.</p>
                             </div>
                             <div class="hero-caption-4 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
@@ -309,13 +331,13 @@
 
                 <section
                     id="nueva-coleccion-hero"
-                    aria-label="Nueva coleccion"
+                    aria-label="Nueva colección"
                     class="mt-6 hidden border border-[#B8ADA1]/40 bg-[#FAF8F5] p-4 opacity-100 peer-checked:block sm:p-5 lg:p-6"
                 >
-                    <p class="font-[DM_Sans] text-[11px] uppercase tracking-[0.16em] text-[#6E6A66]">Nueva coleccion</p>
+                    <p class="font-[DM_Sans] text-[11px] uppercase tracking-[0.16em] text-[#6E6A66]">Nueva colección</p>
                     <p class="mt-2 font-[Cormorant_Garamond] text-3xl leading-none">Essentiels Printemps</p>
                     <p class="mt-3 max-w-2xl font-[DM_Sans] text-sm leading-relaxed text-[#6E6A66]">
-                        Una seleccion curada de siluetas ligeras, texturas nobles y tonos neutros para una elegancia cotidiana atemporal.
+                        Una selección curada de siluetas ligeras, texturas nobles y tonos neutros para una elegancia cotidiana atemporal.
                     </p>
 
                     <div class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="list" aria-label="Piezas de la nueva colección 2026">
@@ -341,20 +363,20 @@
 
                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="images/campaña-2026/pantalon-wide-leg-lana.webp" alt="Pantalon wide leg de lana de la nueva colección 2026" class="h-full w-full object-cover" />
+                                <img src="images/campaña-2026/pantalon-wide-leg-lana.webp" alt="Pantalón wide leg de lana de la nueva colección 2026" class="h-full w-full object-cover" />
                             </div>
                             <div class="p-4">
-                                <h3 class="font-[Cormorant_Garamond] text-2xl">Pantalon Wide Leg de Lana</h3>
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Pantalón Wide Leg de Lana</h3>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
                             </div>
                         </article>
 
                         <article class="border border-[#B8ADA1]/40 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="images/campaña-2026/pantalon-lino-relajado.webp" alt="Pantalon de lino relajado de la nueva colección 2026" class="h-full w-full object-cover" />
+                                <img src="images/campaña-2026/pantalon-lino-relajado.webp" alt="Pantalón de lino relajado de la nueva colección 2026" class="h-full w-full object-cover" />
                             </div>
                             <div class="p-4">
-                                <h3 class="font-[Cormorant_Garamond] text-2xl">Pantalon de Lino Relajado</h3>
+                                <h3 class="font-[Cormorant_Garamond] text-2xl">Pantalón de Lino Relajado</h3>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
                             </div>
                         </article>
@@ -393,24 +415,15 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de camisas">
                         <article id="categoria-camisas" class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80" alt="Camisa Signature de seda minimalista en color marfil" class="h-full w-full object-cover" />
+                                <img src="images-nuevos-lanzamientos/blazer-contemporaneo.webp" alt="Blazer Contemporáneo" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Camisa Signature</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Camisas</p>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Blazer Contemporáneo</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Designed for the modern feminine wardrobe.</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 320</p>
                             </div>
                         </article>
-                        <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
-                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80" alt="Camisa Atelier en algodon organico color marfil" class="h-full w-full object-cover" />
-                            </div>
-                            <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Camisa Atelier</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Camisas</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
-                            </div>
-                        </article>
+        
                     </div>
                 </section>
 
@@ -419,11 +432,11 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de calzado">
                         <article id="categoria-calzado" class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=80" alt="Ballerina Muse de cuero minimalista en tono nude" class="h-full w-full object-cover" />
+                                <img src="images-nuevos-lanzamientos/sandalias.webp" alt="Sandalias minimalistas, nuevo lanzamiento" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Ballerina Muse</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Calzado</p>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Sandalias Minimalistas</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Recently arrived from the VOILÀ atelier.</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 350</p>
                             </div>
                         </article>
@@ -436,59 +449,91 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de pantalones">
                         <article id="categoria-pantalones" class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Pantalon Ligne recto de corte limpio en tono taupe" class="h-full w-full object-cover" />
+                                <img src="images-nuevos-lanzamientos/pantalon.webp" alt="Pantalón Ligne recto de corte limpio en tono taupe" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Pantalon Ligne</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Pantalón Ligne</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Designed for the modern feminine wardrobe.</p>
+                                <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
+                            </div>
+                        </article>
+                       
+                    </div>
+                </section>
+
+                <section id="nuevos-accesorios" aria-labelledby="nuevos-accesorios-title" class="scroll-mt-28 pb-10">
+                    <h3 id="nuevos-accesorios-title" class="mb-4 border-b border-[#B8ADA1]/30 pb-2 font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66]">Accesorios</h3>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de accesorios">
+                        <article id="categoria-accesorios" class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
+                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
+                                <img src="images-nuevos-lanzamientos/bolso-premium.webp" alt="Bolso Etoile vegano premium en color espresso" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="space-y-1 p-5">
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Etoile Vegano Premium</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Introducing the new VOILÀ collection.</p>
+                                <p class="pt-2 font-[DM_Sans] text-sm">€ 560</p>
+                            </div>
+                        </article>
+                       
+                    </div>
+                </section>
+                <section aria-labelledby="nuevos-vestidos-title" class="scroll-mt-28 pb-10">
+                    <h3 id="nuevos-vestidos-title" class="mb-4 border-b border-[#B8ADA1]/30 pb-2 font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66]">Vestidos</h3>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de vestidos">
+                        <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
+                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
+                                <img src="images-nuevos-lanzamientos/vestido-satinado-ultrafemenino.webp" alt="Vestido Satinado Ultrafemenino" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="space-y-1 p-5">
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Vestido Satinado Ultrafemenino</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Contemporary essentials with Parisian refinement.</p>
+                                <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section aria-labelledby="nuevos-looks-title" class="scroll-mt-28 pb-10">
+                    <h3 id="nuevos-looks-title" class="mb-4 border-b border-[#B8ADA1]/30 pb-2 font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66]">Looks completos</h3>
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos looks completos para esta temporada">
+                        <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
+                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
+                                <img src="images-nuevos-lanzamientos/campaña-fashion-forward.webp" alt="Campaña Fashion Forward" class="h-full w-full object-cover" />
+                            </div>
+                            <div class="space-y-1 p-5">
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Campaña Fashion Forward</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Recently arrived from the VOILÀ atelier.</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
                             </div>
                         </article>
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=900&q=80" alt="Pantalon Serein de talle alto en lana ligera" class="h-full w-full object-cover" />
+                                <img src="images-nuevos-lanzamientos/look-primavera-verano.webp" alt="Look Primavera Verano" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Pantalon Serein</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 330</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="nuevos-accesorios" aria-labelledby="nuevos-accesorios-title" class="scroll-mt-28">
-                    <h3 id="nuevos-accesorios-title" class="mb-4 border-b border-[#B8ADA1]/30 pb-2 font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66]">Accesorios</h3>
-                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de accesorios">
-                        <article id="categoria-accesorios" class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
-                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80" alt="Bolso Etoile de cuero premium en color espresso" class="h-full w-full object-cover" />
-                            </div>
-                            <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Etoile</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Accesorios</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 560</p>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Look Primavera Verano</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Fresh arrivals shaped by elegance and movement.</p>
+                                <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
                             </div>
                         </article>
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Cinturon Ligne en cuero suave color espresso" class="h-full w-full object-cover" />
+                                <img src="images-nuevos-lanzamientos/set-monocromatico.webp" alt="Set Monocromático" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Aretes Ligne</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Accesorios</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 190</p>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Set Monocromático</h4>
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Recently arrived from the VOILÀ atelier.</p>
+                                <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
                             </div>
                         </article>
                     </div>
                 </section>
-            </section>
 
             <section aria-labelledby="best-sellers-title" class="mx-auto w-full max-w-7xl px-4 pb-14 pt-6 sm:px-6 lg:px-10 lg:pb-20 lg:pt-10">
                 <div class="mb-8 flex flex-col items-start gap-3 border-b border-[#B8ADA1]/50 pb-4 sm:flex-row sm:items-end sm:justify-between">
                       <h2 id="best-sellers-title" class="font-[Cormorant_Garamond] text-3xl leading-none sm:text-4xl">Más vendidos</h2>
                     <a href="#" class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66] transition-colors duration-300 hover:text-[#3B302A]">
-                        Edit seleccion
+                        Editar selección
                     </a>
                 </div>
 
@@ -497,24 +542,15 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Más vendidos de camisas">
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80" alt="Camisa Signature de seda en corte relajado" class="h-full w-full object-cover" />
+                                <img src="images-mas-vendidos/camisa-blanca-minimalista.webp" alt="Camisa blanca minimalista" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Camisa Signature</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Camisa Blanca Minimalista</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Camisas</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 320</p>
                             </div>
                         </article>
-                        <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
-                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=900&q=80" alt="Blusa Etoffe de seda fluida en tono hueso" class="h-full w-full object-cover" />
-                            </div>
-                            <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Blusa Etoffe</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Camisas</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 360</p>
-                            </div>
-                        </article>
+
                     </div>
                 </section>
 
@@ -523,10 +559,10 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Más vendidos de calzado">
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1610398752800-146f269dfcc8?auto=format&fit=crop&w=900&q=80" alt="Zapato loafer de cuero en estilo minimalista de VOILÀ" class="h-full w-full object-cover" />
+                                <img src="images-mas-vendidos/botas-altas.webp" alt="Botas altas sofisticadas veganas" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Loafer 18</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Botas Altas Sofisticadas Veganas</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Calzado</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 390</p>
                             </div>
@@ -540,24 +576,15 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Más vendidos de pantalones">
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Pantalon Ligne de sastreria recta en tono taupe" class="h-full w-full object-cover" />
+                                <img src="images-mas-vendidos/pantalon-lino.webp" alt="Pantalón Ligne de lino en tono natural" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Pantalon Ligne</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Pantalón Ligne de Lino</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 290</p>
                             </div>
                         </article>
-                        <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
-                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=900&q=80" alt="Pantalon Fluidite de pierna amplia en tejido premium" class="h-full w-full object-cover" />
-                            </div>
-                            <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Pantalon Fluidite</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Pantalones</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 350</p>
-                            </div>
-                        </article>
+                        
                     </div>
                 </section>
 
@@ -566,30 +593,21 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Más vendidos de accesorios">
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=900&q=80" alt="Sac Mini 02, bolso mini de mano en piel color cacao" class="h-full w-full object-cover" />
+                                <img src="images-mas-vendidos/bolso-estructurado.webp" alt="Bolso estructurado vegano en color beige" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Sac Mini 02</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Estructurado</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Accesorios</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 470</p>
                             </div>
                         </article>
-                        <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
-                            <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=900&q=80" alt="Lunettes Ligne, gafas de sol ovaladas en tono carey" class="h-full w-full object-cover" />
-                            </div>
-                            <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Lunettes Ligne</h4>
-                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Accesorios</p>
-                                <p class="pt-2 font-[DM_Sans] text-sm">€ 240</p>
-                            </div>
-                        </article>
+                        
                     </div>
                 </section>
             </section>
         </main>
 
-        <footer class="bg-[#3B302A] text-[#FAF8F5]" aria-label="Pie de pagina">
+        <footer class="bg-[#3B302A] text-[#FAF8F5]" aria-label="Pie de página">
                 <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-10 lg:py-20">
                 <section aria-labelledby="footer-categorias" class="space-y-4">
                       <h2 id="footer-categorias" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Categorías</h2>
@@ -648,6 +666,7 @@
                     <ul class="space-y-3 font-[DM_Sans] text-sm text-[#EAE4DC]">
                         <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Instagram</a></li>
                         <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Pinterest</a></li>
+                        <li><a href="https://x.com/voilamaison" class="transition-colors duration-300 hover:text-[#FAF8F5]" target="_blank" rel="noopener noreferrer">X</a></li>
                         <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">TikTok</a></li>
                         <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Facebook</a></li>
                     </ul>
