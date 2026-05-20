@@ -211,20 +211,20 @@
         </header>
 
         <main>
-            <section aria-label="Hero principal" class="mx-auto w-full max-w-7xl px-4 pb-12 pt-8 sm:px-6 lg:px-10 lg:pb-20 lg:pt-14">
+            <section aria-label="Hero principal" class="mx-auto w-full max-w-6xl px-4 pb-12 pt-8 sm:px-6 lg:px-10 lg:pb-14 lg:pt-10">
                 <input id="toggle-coleccion-hero" type="checkbox" class="peer sr-only" aria-controls="nueva-coleccion-hero" />
-                <div class="grid items-stretch gap-6 md:grid-cols-2 lg:gap-8 lg:grid-cols-12">
-                    <article class="flex flex-col justify-between border border-[#B8ADA1]/40 bg-[#EAE4DC]/45 p-8 lg:col-span-5 lg:p-12">
+                <div class="grid items-stretch gap-6 md:grid-cols-2 lg:gap-6 lg:grid-cols-12">
+                    <article class="flex flex-col justify-between border border-[#B8ADA1]/40 bg-[#EAE4DC]/45 p-8 lg:col-span-5 lg:p-9 order-2 md:order-1">
                         <p class="font-[DM_Sans] text-xs uppercase tracking-[0.2em] text-[#6E6A66]">VOILA Maison</p>
-                        <div class="mt-6 space-y-6 lg:mt-10">
-                            <h1 class="font-[Cormorant_Garamond] text-4xl leading-[1.02] tracking-[0.01em] sm:text-5xl lg:text-6xl">
+                        <div class="mt-6 space-y-6 lg:mt-7 lg:space-y-4">
+                            <h1 class="font-[Cormorant_Garamond] text-4xl leading-[1.02] tracking-[0.01em] sm:text-5xl lg:text-5xl">
                                 Timeless essentials designed for modern living.
                             </h1>
                             <p class="max-w-md font-[DM_Sans] text-sm leading-relaxed text-[#6E6A66] sm:text-base">
                                 Siluetas depuradas, materiales nobles y una actitud silenciosamente sofisticada. Una colección pensada para vestir la vida cotidiana con precisión y calma.
                             </p>
                         </div>
-                        <div class="mt-10">
+                        <div class="mt-10 lg:mt-7">
                             <label
                                 for="toggle-coleccion-hero"
                                 class="inline-flex cursor-pointer items-center border border-[#3B302A] px-8 py-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em] transition-colors duration-300 hover:bg-[#3B302A] hover:text-[#FAF8F5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3B302A]"
@@ -234,32 +234,32 @@
                         </div>
                     </article>
 
-                    <article class="relative min-h-[28rem] overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[40rem]" aria-label="Carrusel de campaña 2026">
+                    <article class="relative min-h-[28rem] w-full overflow-hidden border border-[#B8ADA1]/40 bg-[#D7CEC4] lg:col-span-7 lg:min-h-[35rem] order-1 md:order-2" aria-label="Carrusel de campaña 2026">
                         <input id="hero-slide-1" name="hero-slide" type="radio" class="sr-only" checked />
                         <input id="hero-slide-2" name="hero-slide" type="radio" class="sr-only" />
                         <input id="hero-slide-3" name="hero-slide" type="radio" class="sr-only" />
                         <input id="hero-slide-4" name="hero-slide" type="radio" class="sr-only" />
 
-                        <div class="hero-slides absolute inset-0">
+                        <div class="hero-slides absolute inset-0 w-full">
                             <img
                                 src="images/campaña-2026/campaña-voila-vestido-negro-estructurado.webp"
                                 alt="Vestido negro estructurado de la campaña VOILÀ 2026"
-                                class="hero-slide-1 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-1 absolute inset-0 h-full w-full object-contain md:object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/campaña-voila-vestido-satinado.webp"
                                 alt="Vestido satinado de la campaña VOILÀ 2026"
-                                class="hero-slide-2 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-2 absolute inset-0 h-full w-full object-contain md:object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/coleccion-otoño-invierno.webp"
                                 alt="Look de colección otoño-invierno de VOILÀ"
-                                class="hero-slide-3 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-3 absolute inset-0 h-full w-full object-contain md:object-cover opacity-0 transition-opacity duration-700"
                             />
                             <img
                                 src="images/campaña-2026/coleccion-primavera-verano.webp"
                                 alt="Look de colección primavera-verano de VOILÀ"
-                                class="hero-slide-4 absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                                class="hero-slide-4 absolute inset-0 h-full w-full object-contain md:object-cover opacity-0 transition-opacity duration-700"
                             />
                         </div>
 
@@ -300,24 +300,24 @@
                             </div>
                         </div>
 
-                        <div class="hero-caption absolute bottom-0 left-0 right-0 z-10 border-t border-[#FAF8F5]/40 bg-[#3B302A]/35 p-6 text-[#FAF8F5] backdrop-blur-[1px] lg:p-8">
-                            <div class="hero-caption-1 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                        <div class="hero-caption absolute bottom-0 left-0 right-0 z-10 border-t border-[#FAF8F5]/40 bg-[#3B302A]/35 p-6 text-[#FAF8F5] backdrop-blur-[1px] lg:p-6 mb-10">
+                            <div class="hero-caption-1 absolute inset-0 p-4 opacity-0 transition-opacity duration-500 ">
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">VOILÀ Campaign 2026</p>
-                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Quiet confidence in every detail.</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-2xl">Quiet confidence in every detail.</p>
                             </div>
-                            <div class="hero-caption-2 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                            <div class="hero-caption-2 absolute inset-0 p-4 opacity-0 transition-opacity duration-500 ">
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">VOILÀ Collection 2026</p>
-                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">An intimate expression of modern femininity.</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-2xl">An intimate expression of modern femininity.</p>
                             </div>
-                            <div class="hero-caption-3 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                            <div class="hero-caption-3 absolute inset-0 p-4 opacity-0 transition-opacity duration-500 ">
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Otoño Invierno</p>
-                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Soft tailoring shaped for colder seasons.</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-2xl">Soft tailoring shaped for colder seasons.</p>
                             </div>
-                            <div class="hero-caption-4 absolute inset-0 p-6 opacity-0 transition-opacity duration-500 ">
+                            <div class="hero-caption-4 absolute inset-0 p-4 opacity-0 transition-opacity duration-500 ">
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Primavera Verano</p>
-                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-3xl">Natural textures illuminated by softness and light.</p>
+                                <p class="mt-2 max-w-lg font-[Cormorant_Garamond] text-2xl leading-tight lg:text-2xl">Natural textures illuminated by softness and light.</p>
                             </div>
-                            <div class="pointer-events-none h-20 sm:h-16"></div>
+                            <div class="pointer-events-none h-20 sm:h-16 lg:h-12"></div>
                         </div>
 
                         <div class="hero-dots absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3" aria-label="Indicadores del carrusel">
@@ -466,10 +466,10 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Nuevos lanzamientos de accesorios">
                         <article id="categoria-accesorios" class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="images-nuevos-lanzamientos/bolso-premium.webp" alt="Bolso Etoile vegano premium en color espresso" class="h-full w-full object-cover" />
+                                <img src="images-nuevos-lanzamientos/bolso-premium.webp" alt="Bolso Etoile Cuero Vegano Premium en color espresso" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Etoile Vegano Premium</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Etoile Cuero Vegano Premium</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Introducing the new VOILÀ collection.</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 560</p>
                             </div>
@@ -559,10 +559,10 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Más vendidos de calzado">
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="images-mas-vendidos/botas-altas.webp" alt="Botas altas sofisticadas veganas" class="h-full w-full object-cover" />
+                                <img src="images-mas-vendidos/botas-altas.webp" alt="Botas altas sofisticadas cuero vegano" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Botas Altas Sofisticadas Veganas</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Botas Altas Sofisticadas Cuero Vegano</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Calzado</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 390</p>
                             </div>
@@ -593,10 +593,10 @@
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Más vendidos de accesorios">
                         <article class="w-full border border-[#B8ADA1]/50 bg-[#FAF8F5]" role="listitem">
                             <div class="aspect-[4/5] border-b border-[#B8ADA1]/40 bg-[#EAE4DC]">
-                                <img src="images-mas-vendidos/bolso-estructurado.webp" alt="Bolso estructurado vegano en color beige" class="h-full w-full object-cover" />
+                                <img src="images-mas-vendidos/bolso-estructurado.webp" alt="Bolso estructurado cuero vegano en color beige" class="h-full w-full object-cover" />
                             </div>
                             <div class="space-y-1 p-5">
-                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Estructurado</h4>
+                                <h4 class="font-[Cormorant_Garamond] text-2xl">Bolso Estructurado Cuero Vegano</h4>
                                 <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#6E6A66]">Accesorios</p>
                                 <p class="pt-2 font-[DM_Sans] text-sm">€ 470</p>
                             </div>
