@@ -17,6 +17,26 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .catalogo-grid img {
+            object-fit: contain !important;
+            height: 11rem;
+            background: rgba(234, 228, 220, 0.45);
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .catalogo-grid img {
+                height: 12rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .catalogo-grid img {
+                height: 14rem;
+            }
+        }
+    </style>
 </head>
 <body class="bg-[#FAF8F5] text-[#3B302A] antialiased">
     <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
@@ -106,7 +126,7 @@
     <!-- Barra de filtros -->
     <section class="container mx-auto px-4 py-6">
         <h2 class="text-xl font-serif mb-4">Filtrar productos</h2>
-        <div class="flex space-x-4">
+        <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
             <select class="border border-[#B8ADA1] rounded px-4 py-2">
                 <option value="">Categoría</option>
                 <option value="camisas">Camisas</option>
@@ -126,7 +146,7 @@
     <!-- Listado de productos -->
     <main class="container mx-auto px-4 py-6">
         <h2 class="text-xl font-serif mb-4">Productos</h2>
-        <div class="grid grid-cols-4 gap-6">
+        <div class="catalogo-grid grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <!-- Camisas -->
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
                 <img src="images/campaña-2026/camisa-minimalista-lino-convertido.webp" alt="Camisa Arena" class="w-full h-40 object-cover rounded">
