@@ -1,0 +1,18 @@
+.catalogo-grid img {
+    object-fit: contain !important;
+    height: 11rem;
+    background: rgba(234, 228, 220, 0.45);
+    padding: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .catalogo-grid img {
+        height: 12rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .catalogo-grid img {
+        height: 14rem;
+    }
+}
