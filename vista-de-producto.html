@@ -5,18 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>VOILÀ | Vista de Producto</title>
         <meta name="description" content="Vista de producto VOILÀ: esenciales atemporales de moda de lujo para la vida moderna." />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+       
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="style-vista-de-producto.css" />
     </head>
 
     <body class="bg-[#FAF8F5] text-[#3B302A] min-h-screen flex flex-col">
 
-        <!-- ══════════════════════════════════
-             HEADER compartido del equipo
-        ══════════════════════════════════ -->
         <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
             <nav
                 class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 lg:px-10"
@@ -30,7 +28,7 @@
                     <li><a href="index.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
                     <li><a href="catalogo.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
                     <li><a href="vista-de-producto.html" class="font-medium" aria-current="page">Vista de producto</a></li>
-                    <li><a href="#" class="transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
+                    <li><a href="carrito.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
                     <li><a href="formulario_pago.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
                 </ul>
 
@@ -65,29 +63,23 @@
                         <li><a href="index.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
                         <li><a href="catalogo.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
                         <li><a href="vista-de-producto.html" class="block border-b border-[#B8ADA1]/30 pb-2 font-medium">Vista de producto</a></li>
-                        <li><a href="#" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
+                        <li><a href="carrito.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
                         <li><a href="formulario_pago.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
                     </ul>
                 </div>
             </details>
         </header>
 
-        <!-- ══════════════════════════════════
-             BREADCRUMB
-        ══════════════════════════════════ -->
         <nav aria-label="Breadcrumb" class="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-10">
             <ol class="flex items-center gap-2 text-xs tracking-[0.08em] text-[#6E6A66]">
                 <li><a href="index.html" class="hover:text-[#3B302A] transition-colors duration-200">Home</a></li>
                 <li aria-hidden="true">/</li>
                 <li><a href="catalogo.html" class="hover:text-[#3B302A] transition-colors duration-200">Catálogo</a></li>
                 <li aria-hidden="true">/</li>
-                <li class="text-[#3B302A]" aria-current="page">Camisa Atelier Linen</li>
+                <li class="text-[#3B302A]" aria-current="page">Camisa Minimalista de Lino</li>
             </ol>
         </nav>
 
-        <!-- ══════════════════════════════════
-             MAIN
-        ══════════════════════════════════ -->
         <main class="flex-1" id="main-content">
 
             <!-- ── SECCIÓN DOS COLUMNAS ── -->
@@ -103,8 +95,8 @@
                         <div class="relative overflow-hidden bg-[#EAE4DC] aspect-[3/4] w-full">
                             <img
                                 id="img-principal"
-                                src="images/campaña-2026/producto-principal.jpg"
-                                alt="Camisa Atelier Linen — vista frontal"
+                                src="images/campaña-2026/camisa-minimalista-lino-convertido.webp"
+                                alt="Camisa Minimalisat de Lino, color natural, vista principal"
                                 class="h-full w-full object-cover transition-opacity duration-500"
                             />
                             <span class="absolute left-4 top-4 bg-[#3B302A] px-3 py-1 font-[DM_Sans] text-[10px] uppercase tracking-[0.14em] text-[#FAF8F5]">Nuevo</span>
@@ -113,21 +105,21 @@
                         <!-- Thumbnails -->
                         <div class="mt-3 flex gap-2 overflow-x-auto pb-1" role="list" aria-label="Vistas del producto">
                             <button
-                                class="thumb active shrink-0 w-20 h-24 overflow-hidden"
+                                class="thumb  shrink-0 w-20 h-24 overflow-hidden"
                                 aria-label="Vista frontal" role="listitem">
-                                <img src="images/campaña-2026/producto-principal.jpg" alt="Vista frontal" class="h-full w-full object-cover"
+                                <img src="images/campaña-2026/camisa-minimalista-lino-convertido.webp" alt="Vista frontal" class="h-full w-full object-cover"
                                      />
                             </button>
                             <button
                                 class="thumb shrink-0 w-20 h-24 overflow-hidden"
                                 aria-label="Vista detalle" role="listitem">
-                                <img src="images/campaña-2026/producto-detalle.jpg" alt="Vista detalle" class="h-full w-full object-cover"
+                                <img src="images/campaña-2026/camisa-de-lino-detalle.webp" alt="Vista detalle" class="h-full w-full object-cover"
                                      />
                             </button>
                             <button
                                 class="thumb shrink-0 w-20 h-24 overflow-hidden"
                                 aria-label="Vista lateral" role="listitem">
-                                <img src="images/campaña-2026/producto-lateral.jpg" alt="Vista lateral" class="h-full w-full object-cover"
+                                <img src="images/campaña-2026/camisa-de-lino-lateral.webp" alt="Vista lateral" class="h-full w-full object-cover"
                                      />
                             </button>
                         </div>
@@ -253,10 +245,7 @@
             </section>
 
         </main>
-
-        <!-- ══════════════════════════════════
-             FOOTER compartido del equipo
-        ══════════════════════════════════ -->
+       
         <footer class="bg-[#3B302A] text-[#FAF8F5]" aria-label="Pie de pagina">
             <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-10 lg:py-20">
 
