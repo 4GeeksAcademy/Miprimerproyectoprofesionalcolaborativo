@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VOILÀ París | Vista de Producto</title>
+        <meta name="description" content="VOILÀ París: vista de producto para explorar los detalles y características de los esenciales atemporales de moda de lujo." />
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="css/style-vista-de-producto.css" />
+    </head>
+
+    <body class="bg-[#FAF8F5] text-[#3B302A] min-h-screen flex flex-col">
+
+        <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
+            <nav
+                class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:gap-6 sm:px-6 lg:px-10"
+                aria-label="Navegacion principal"
+            >
+                <a href="index.html" class="shrink-0 transition-opacity duration-300 hover:opacity-80" aria-label="VOILÀ Inicio">
+                    <img src="images/logo.webp" alt="VOILÀ" class="h-16 w-auto object-contain lg:h-25" />
+                </a>
+
+                <ul class="hidden items-center gap-5 text-xs tracking-[0.08em] md:flex lg:gap-8 lg:text-sm" aria-label="Secciones del sitio">
+                    <li><a href="index.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
+                    <li><a href="catalogo.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
+                    <li><a href="vista-de-producto.html" class="font-medium" aria-current="page">Vista de producto</a></li>
+                    <li><a href="carrito.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
+                    <li><a href="formulario_pago.html" class="transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
+                </ul>
+
+                <div class="ml-auto hidden items-center gap-3 sm:gap-4 md:flex">
+                    <label for="search" class="sr-only">Buscar productos</label>
+                    <input id="search" type="search" placeholder="Buscar"
+                        class="w-24 border border-[#B8ADA1]/70 bg-transparent px-3 py-2 text-sm placeholder:text-[#6E6A66] focus:border-[#3B302A] focus:outline-none sm:w-36 md:w-44 lg:w-56"
+                        aria-label="Buscar en tienda" />
+                    <a href="#" class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#B8ADA1]/70 px-3 py-2 text-sm tracking-[0.06em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC]" aria-label="Mi cuenta">Cuenta</a>
+                </div>
+
+                <div class="ml-auto flex items-center gap-3 md:hidden">
+                    <a href="#" class="inline-flex min-h-10 min-w-10 items-center justify-center border border-[#B8ADA1]/70 px-3 py-2 text-xs uppercase tracking-[0.08em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC]" aria-label="Mi cuenta">Cuenta</a>
+                </div>
+            </nav>
+
+            <details class="group border-t border-[#B8ADA1]/30 md:hidden">
+                <summary class="mx-auto flex w-full max-w-7xl cursor-pointer list-none items-center justify-between px-4 py-3 text-xs uppercase tracking-[0.12em] text-[#3B302A] sm:px-6" aria-label="Abrir menú de navegación">
+                    Menú
+                    <span class="relative h-4 w-5">
+                        <span class="absolute left-0 top-0 h-px w-5 bg-[#3B302A] transition-all duration-300 group-open:top-1.5 group-open:rotate-45"></span>
+                        <span class="absolute left-0 top-1.5 h-px w-5 bg-[#3B302A] transition-opacity duration-300 group-open:opacity-0"></span>
+                        <span class="absolute left-0 top-3 h-px w-5 bg-[#3B302A] transition-all duration-300 group-open:top-1.5 group-open:-rotate-45"></span>
+                    </span>
+                </summary>
+                <div class="border-t border-[#B8ADA1]/30 bg-[#FAF8F5] px-4 pb-5 pt-4 sm:px-6">
+                    <label for="search-mobile" class="sr-only">Buscar productos</label>
+                    <input id="search-mobile" type="search" placeholder="Buscar"
+                        class="mb-4 w-full border border-[#B8ADA1]/70 bg-transparent px-3 py-2 text-sm placeholder:text-[#6E6A66] focus:border-[#3B302A] focus:outline-none"
+                        aria-label="Buscar en tienda" />
+                    <ul class="space-y-3 text-sm tracking-[0.08em]" aria-label="Secciones del sitio en mobile">
+                        <li><a href="index.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Home</a></li>
+                        <li><a href="catalogo.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Catálogo</a></li>
+                        <li><a href="vista-de-producto.html" class="block border-b border-[#B8ADA1]/30 pb-2 font-medium">Vista de producto</a></li>
+                        <li><a href="carrito.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Carrito</a></li>
+                        <li><a href="formulario_pago.html" class="block border-b border-[#B8ADA1]/30 pb-2 transition-colors duration-300 hover:text-[#6E6A66]">Checkout</a></li>
+                    </ul>
+                </div>
+            </details>
+        </header>
+
+        <nav aria-label="Breadcrumb" class="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 lg:px-10">
+            <ol class="flex items-center gap-2 text-xs tracking-[0.08em] text-[#6E6A66]">
+                <li><a href="index.html" class="hover:text-[#3B302A] transition-colors duration-200">Home</a></li>
+                <li aria-hidden="true">/</li>
+                <li><a href="catalogo.html" class="hover:text-[#3B302A] transition-colors duration-200">Catálogo</a></li>
+                <li aria-hidden="true">/</li>
+                <li class="text-[#3B302A]" aria-current="page">Camisa Minimalista de Lino</li>
+            </ol>
+        </nav>
+
+        <main class="flex-1" id="main-content">
+
+            <!-- ── SECCIÓN DOS COLUMNAS ── -->
+            <section
+                class="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-10"
+                aria-labelledby="nombre-producto"
+            >
+                <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+
+                    <!-- COLUMNA IZQUIERDA: foto (~mitad del ancho) -->
+                    <div class="fade-up delay-1">
+                        <!-- Imagen principal -->
+                        <div class="relative overflow-hidden bg-[#EAE4DC] aspect-[3/4] w-full">
+                            <img
+                                id="img-principal"
+                                src="images/campaña-2026/camisa-minimalista-lino-convertido.webp"
+                                alt="Camisa Minimalisat de Lino, color natural, vista principal"
+                                class="h-full w-full object-cover transition-opacity duration-500"
+                            />
+                            <span class="absolute left-4 top-4 bg-[#3B302A] px-3 py-1 font-[DM_Sans] text-[10px] uppercase tracking-[0.14em] text-[#FAF8F5]">Nuevo</span>
+                        </div>
+
+                        <!-- Thumbnails -->
+                        <div class="mt-3 flex gap-2 overflow-x-auto pb-1" role="list" aria-label="Vistas del producto">
+                            <button
+                                class="thumb  shrink-0 w-20 h-24 overflow-hidden"
+                                aria-label="Vista frontal" role="listitem">
+                                <img src="images/campaña-2026/camisa-minimalista-lino-convertido.webp" alt="Vista frontal" class="h-full w-full object-cover"
+                                     />
+                            </button>
+                            <button
+                                class="thumb shrink-0 w-20 h-24 overflow-hidden"
+                                aria-label="Vista detalle" role="listitem">
+                                <img src="images/campaña-2026/camisa-de-lino-detalle.webp" alt="Vista detalle" class="h-full w-full object-cover"
+                                     />
+                            </button>
+                            <button
+                                class="thumb shrink-0 w-20 h-24 overflow-hidden"
+                                aria-label="Vista lateral" role="listitem">
+                                <img src="images/campaña-2026/camisa-de-lino-lateral.webp" alt="Vista lateral" class="h-full w-full object-cover"
+                                     />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: información principal del producto -->
+                    <div class="flex flex-col gap-6 lg:pt-2">
+
+                        <!-- Nombre + Código/referencia + Precio -->
+                        <div class="fade-up delay-2">
+                            <p class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#6E6A66]">VOILÀ — Camisas</p>
+                            <h1 id="nombre-producto" class="mt-2 font-[Cormorant_Garamond] text-4xl font-light leading-tight sm:text-5xl">
+                                Camisa Atelier Linen
+                            </h1>
+                            <!-- Código o referencia -->
+                            <p class="mt-2 font-[DM_Sans] text-xs tracking-[0.12em] text-[#6E6A66]">REF. ATL-2026-001</p>
+                            <!-- Precio -->
+                            <p class="mt-5 font-[Cormorant_Garamond] text-3xl font-light">€ 220</p>
+                            <p class="mt-1 font-[DM_Sans] text-xs text-[#6E6A66]">Impuestos incluidos · Envío calculado al finalizar compra</p>
+                        </div>
+
+                        <!-- Talla -->
+                        <div class="fade-up delay-3">
+                            <div class="flex items-center justify-between mb-3">
+                                <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em]">
+                                    Talla: <span id="talla-label" class="font-medium">—</span>
+                                </p>
+                                <button class="font-[DM_Sans] text-xs text-[#6E6A66] underline underline-offset-2 hover:text-[#3B302A] transition-colors">
+                                    Guía de talles
+                                </button>
+                            </div>
+                            <div class="flex flex-wrap gap-2" role="radiogroup" aria-label="Seleccionar talla">
+                                <button class="talla-btn">XS</button>
+                                <button class="talla-btn">S</button>
+                                <button class="talla-btn">M</button>
+                                <button class="talla-btn">L</button>
+                                <button class="talla-btn" disabled aria-disabled="true" title="Sin stock">XL</button>
+                            </div>
+                        </div>
+
+                        <!-- Selector de cantidad -->
+                        <div class="fade-up delay-3">
+                            <p class="font-[DM_Sans] text-xs uppercase tracking-[0.14em] mb-3">Cantidad</p>
+                            <div class="flex items-center border border-[#B8ADA1]/70 w-fit" role="group" aria-label="Selector de cantidad">
+                                <button
+                                    class="px-4 py-3 font-[DM_Sans] text-base hover:bg-[#EAE4DC] transition-colors duration-200"
+                                    aria-label="Disminuir cantidad">−</button>
+                                <span
+                                    id="cantidad"
+                                    class="px-6 py-3 font-[DM_Sans] text-sm border-x border-[#B8ADA1]/70 min-w-[3.5rem] text-center"
+                                    aria-live="polite" aria-label="Cantidad seleccionada">1</span>
+                                <button
+                                    class="px-4 py-3 font-[DM_Sans] text-base hover:bg-[#EAE4DC] transition-colors duration-200"
+                                    aria-label="Aumentar cantidad">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Botón Agregar al carrito -->
+                        <div class="fade-up delay-4 flex flex-col gap-3 sm:flex-row">
+                            <button
+                                class="flex-1 bg-[#3B302A] px-6 py-4 font-[DM_Sans] text-xs uppercase tracking-[0.14em] text-[#FAF8F5] transition-colors duration-300 hover:bg-[#6E6A66] focus:outline-none focus:ring-2 focus:ring-[#3B302A] focus:ring-offset-2"
+                                aria-label="Agregar al carrito"
+                            >
+                                Agregar al carrito
+                            </button>
+                            <button
+                                class="border border-[#B8ADA1]/70 px-5 py-4 font-[DM_Sans] text-xs uppercase tracking-[0.14em] transition-colors duration-300 hover:border-[#3B302A] hover:bg-[#EAE4DC] focus:outline-none focus:ring-2 focus:ring-[#3B302A] focus:ring-offset-2"
+                                aria-label="Guardar en favoritos"
+                            >
+                                ♡ Guardar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── SECCIÓN DESCRIPCIÓN DETALLADA (debajo de las dos columnas) ── -->
+            <section
+                class="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-10 border-t border-[#B8ADA1]/40 pt-14"
+                aria-labelledby="titulo-descripcion"
+            >
+                <h2 id="titulo-descripcion" class="font-[Cormorant_Garamond] text-3xl font-light mb-10 sm:text-4xl">
+                    Descripción detallada
+                </h2>
+
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+
+                    <!-- Materiales -->
+                    <div>
+                        <h3 class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#3B302A] mb-4 pb-3 border-b border-[#B8ADA1]/40">
+                            Materiales
+                        </h3>
+                        <p class="font-[Cormorant_Garamond] text-lg font-light leading-relaxed text-[#6E6A66]">
+                            Lino 100% europeo de gramaje medio, certificado OEKO-TEX®. Hilos de costura en algodón reforzado. Botones en nácar natural. El tejido gana suavidad y carácter con cada lavado, desarrollando una pátina única que refleja el paso del tiempo.
+                        </p>
+                        <ul class="mt-6 space-y-2 font-[DM_Sans] text-sm text-[#6E6A66]">
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> 100% Lino europeo certificado OEKO-TEX®</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Costura en algodón reforzado</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Botones en nácar natural</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Lavado a mano o máquina 30°C · Planchar en caliente</li>
+                        </ul>
+                    </div>
+
+                    <!-- Uso recomendado -->
+                    <div>
+                        <h3 class="font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#3B302A] mb-4 pb-3 border-b border-[#B8ADA1]/40">
+                            Uso recomendado
+                        </h3>
+                        <p class="font-[Cormorant_Garamond] text-lg font-light leading-relaxed text-[#6E6A66]">
+                            Diseñada para acompañar la vida moderna sin esfuerzo. Su corte relajado y tejido natural la hacen versátil en cualquier escenario donde la elegancia discreta sea el tono.
+                        </p>
+                        <ul class="mt-6 space-y-3 font-[DM_Sans] text-sm text-[#6E6A66]">
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Reuniones de trabajo con ambiente creativo o casual</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Salidas diurnas en clima cálido o templado</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Eventos al aire libre: mercados, galerías, terrazas</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Viajes donde se prioriza estilo sin equipaje voluminoso</li>
+                            <li class="flex items-start gap-3"><span class="text-[#B8ADA1] mt-0.5">—</span> Cenas informales o noches de verano</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+       
+        <footer class="bg-[#3B302A] text-[#FAF8F5]" aria-label="Pie de pagina">
+            <div class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:px-10 lg:py-20">
+
+                <section aria-labelledby="footer-categorias" class="space-y-4">
+                    <h2 id="footer-categorias" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Categorías</h2>
+                    <ul class="space-y-4 font-[Cormorant_Garamond] text-xl leading-none sm:text-2xl">
+                        <li>
+                            <p>Calzado</p>
+                            <div class="mt-2 flex gap-3 font-[DM_Sans] text-[11px] uppercase tracking-[0.14em] text-[#EAE4DC]">
+                                <a href="index.html#nuevos-calzado" class="transition-colors duration-300 hover:text-[#FAF8F5]">Nuevos</a>
+                                <a href="index.html#vendidos-calzado" class="transition-colors duration-300 hover:text-[#FAF8F5]">Más vendidos</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Camisas</p>
+                            <div class="mt-2 flex gap-3 font-[DM_Sans] text-[11px] uppercase tracking-[0.14em] text-[#EAE4DC]">
+                                <a href="index.html#nuevos-camisas" class="transition-colors duration-300 hover:text-[#FAF8F5]">Nuevos</a>
+                                <a href="index.html#vendidos-camisas" class="transition-colors duration-300 hover:text-[#FAF8F5]">Más vendidos</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Pantalones</p>
+                            <div class="mt-2 flex gap-3 font-[DM_Sans] text-[11px] uppercase tracking-[0.14em] text-[#EAE4DC]">
+                                <a href="index.html#nuevos-pantalones" class="transition-colors duration-300 hover:text-[#FAF8F5]">Nuevos</a>
+                                <a href="index.html#vendidos-pantalones" class="transition-colors duration-300 hover:text-[#FAF8F5]">Más vendidos</a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Accesorios</p>
+                            <div class="mt-2 flex gap-3 font-[DM_Sans] text-[11px] uppercase tracking-[0.14em] text-[#EAE4DC]">
+                                <a href="index.html#nuevos-accesorios" class="transition-colors duration-300 hover:text-[#FAF8F5]">Nuevos</a>
+                                <a href="index.html#vendidos-accesorios" class="transition-colors duration-300 hover:text-[#FAF8F5]">Más vendidos</a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="footer-legal" class="space-y-4">
+                    <h2 id="footer-legal" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Legal</h2>
+                    <ul class="space-y-3 font-[DM_Sans] text-sm text-[#EAE4DC]">
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Términos y condiciones</a></li>
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Política de privacidad</a></li>
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Sobre la marca</a></li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="footer-contacto" class="space-y-4">
+                    <h2 id="footer-contacto" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Contacto</h2>
+                    <address class="space-y-3 font-[DM_Sans] text-sm not-italic text-[#EAE4DC]">
+                        <p>14 Rue de Turenne, 75004 Paris, France</p>
+                        <p><a href="tel:+33142860000" class="transition-colors duration-300 hover:text-[#FAF8F5]">+33 1 42 86 00 00</a></p>
+                        <p><a href="mailto:support@voila-maison.com" class="transition-colors duration-300 hover:text-[#FAF8F5]">support@voila-maison.com</a></p>
+                    </address>
+                </section>
+
+                <section aria-labelledby="footer-social" class="space-y-4">
+                    <h2 id="footer-social" class="border-b border-[#FAF8F5]/30 pb-3 font-[DM_Sans] text-xs uppercase tracking-[0.18em]">Redes sociales</h2>
+                    <ul class="space-y-3 font-[DM_Sans] text-sm text-[#EAE4DC]">
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Instagram</a></li>
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Pinterest</a></li>
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">TikTok</a></li>
+                        <li><a href="#" class="transition-colors duration-300 hover:text-[#FAF8F5]">Facebook</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="border-t border-[#FAF8F5]/20 px-6 py-5 lg:px-10">
+                <p class="mx-auto w-full max-w-7xl font-[DM_Sans] text-xs uppercase tracking-[0.16em] text-[#EAE4DC]">
+                    © 2026 VOILÀ. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+    </body>
+</html>
