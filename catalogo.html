@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VOILÀ | Catálogo</title>
+    <title>VOILÀ París | Catálogo</title>
     <meta
         name="description"
-        content="VOILÀ: catálogo de esenciales atemporales de moda de lujo para la vida moderna."
+        content="VOILÀ París: catálogo de esenciales atemporales de moda de lujo para la vida moderna."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,14 +15,14 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
         rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles-catalogo.css" />
+    <link rel="stylesheet" href="css/styles-catalogo.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-[#FAF8F5] text-[#3B302A] antialiased">
     <header class="sticky top-0 z-50 border-b border-[#B8ADA1]/40 bg-[#FAF8F5]/95 backdrop-blur-sm">
         <nav
-            class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 lg:px-10"
+            class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:gap-6 sm:px-6 lg:px-10"
             aria-label="Navegacion principal"
         >
             <a
@@ -30,7 +30,7 @@
                 class="shrink-0 transition-opacity duration-300 hover:opacity-80"
                 aria-label="VOILÀ Inicio"
             >
-                <img src="images-logo/logo.webp" alt="VOILÀ" class="h-16 w-auto object-contain lg:h-20" />
+                <img src="images/logo.webp" alt="VOILÀ" class="h-16 w-auto object-contain lg:h-25" />
             </a>
 
             <ul class="hidden items-center gap-5 text-xs tracking-[0.08em] md:flex lg:gap-8 lg:text-sm" aria-label="Secciones del sitio">
@@ -108,7 +108,7 @@
     <section class="container mx-auto px-4 py-6">
         <h2 class="text-xl font-serif mb-4">Filtrar productos</h2>
         <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <select class="border border-[#B8ADA1] rounded px-4 py-2">
+            <select class="filter-select rounded border border-[#B8ADA1] bg-[#FAF8F5] px-4 py-2 text-[#3B302A] focus:border-[#6E6A66] focus:outline-none focus:ring-2 focus:ring-[#B8ADA1]/40">
                 <option value="">Categoría</option>
                 <option value="camisas">Camisas</option>
                 <option value="pantalones">Pantalones</option>
@@ -116,7 +116,7 @@
                 <option value="calzado">Calzado</option>
                 <option value="accesorios">Accesorios</option>
             </select>
-            <select class="border border-[#B8ADA1] rounded px-4 py-2">
+            <select class="filter-select rounded border border-[#B8ADA1] bg-[#FAF8F5] px-4 py-2 text-[#3B302A] focus:border-[#6E6A66] focus:outline-none focus:ring-2 focus:ring-[#B8ADA1]/40">
                 <option value="">Talla</option>
                 <option value="s">S</option>
                 <option value="m">M</option>
@@ -132,21 +132,21 @@
         <div class="catalogo-grid grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <!-- Camisas -->
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/camisa-minimalista-lino-convertido.webp" alt="Camisa Arena" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/camisa-minimalista-lino-convertido.webp" alt="Camisa Arena" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Camisa Minimalista de Lino</h3>
                 <p class="text-sm mb-1">Categoría: Camisas | Talla: M</p>
                 <p class="text-sm">€ 220</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/blusa-de-seda-negra.webp" alt="Blusa de Seda Negra" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/blusa-de-seda-negra.webp" alt="Blusa de Seda Negra" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Blusa de Seda Negra</h3>
                 <p class="text-sm mb-1">Categoría: Camisas | Talla: L</p>
                 <p class="text-sm">€ 200</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
              <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-nuevos-lanzamientos/blazer-contemporaneo.webp" alt="Blazer Contemporaneo Negro" class="w-full h-40 object-cover rounded">
+                <img src="images-nuevos-lanzamientos/blazer-contemporaneo.webp" alt="Blazer Contemporaneo Negro" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Blazer Contemporáneo Negro</h3>
                 <p class="text-sm mb-1">Categoría: Camisas | Talla: XL</p>
                 <p class="text-sm">€ 3200</p>
@@ -154,28 +154,28 @@
             </div>
             <!-- Vestidos -->
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/campaña-voila-vestido-satinado.webp" alt="Vestido de Seda Voilá" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/campaña-voila-vestido-satinado.webp" alt="Vestido de Seda Voilá" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Vestido de Seda Voilá</h3>
                 <p class="text-sm mb-1">Categoría: Vestidos | Talla: S</p>
                 <p class="text-sm">€ 450.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/campaña-voila-vestido-negro-estructurado.webp" alt="Vestido Negro Estructurado" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/campaña-voila-vestido-negro-estructurado.webp" alt="Vestido Negro Estructurado" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Vestido Negro Estructurado</h3>
                 <p class="text-sm mb-1">Categoría: Vestidos | Talla: XL</p>
                 <p class="text-sm">€ 400.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
              <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/coleccion-primavera-verano.webp" alt="Vestido Primavera-Verano blanco" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/coleccion-primavera-verano.webp" alt="Vestido Primavera-Verano blanco" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Colección Primavera-Verano</h3>
                 <p class="text-sm mb-1">Categoría: Vestidos | Talla: L</p>
                 <p class="text-sm">€ 300.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-nuevos-lanzamientos/vestido-satinado-ultrafemenino.webp" alt="Vestido Satinado Ultrafemenino" class="w-full h-40 object-cover rounded">
+                <img src="images-nuevos-lanzamientos/vestido-satinado-ultrafemenino.webp" alt="Vestido Satinado Ultrafemenino" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Vestido Satinado Ultrafemenino</h3>
                 <p class="text-sm mb-1">Categoría: Vestidos | Talla: M</p>
                 <p class="text-sm">€ 290.00</p>
@@ -183,28 +183,28 @@
             </div>
             <!-- Pantalones -->
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/pantalon-lino-relajado.webp" alt="Pantalón de lino relajado color beige" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/pantalon-lino-relajado.webp" alt="Pantalón de lino relajado color beige" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Pantalón Lino Relajado</h3>
                 <p class="text-sm mb-1">Categoría: Pantalones | Talla: M</p>
                 <p class="text-sm">€ 120.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/pantalon-wide-leg-lana.webp" alt="Pantalón Wide Leg Lana" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/pantalon-wide-leg-lana.webp" alt="Pantalón Wide Leg Lana" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Pantalón Wide Leg Lana</h3>
                 <p class="text-sm mb-1">Categoría: Pantalones | Talla: L</p>
                 <p class="text-sm">€ 140.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
              <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-nuevos-lanzamientos/pantalon-ligne.webp" alt="Pantalón Ligne" class="w-full h-40 object-cover rounded">
+                <img src="images-nuevos-lanzamientos/pantalon-ligne.webp" alt="Pantalón Ligne" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Pantalón Ligne</h3>
                 <p class="text-sm mb-1">Categoría: Pantalones | Talla: L</p>
                 <p class="text-sm">€ 290.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-mas-vendidos/pantalon-lino.webp" alt="Pantalón Ligne de Lino" class="w-full h-40 object-cover rounded">
+                <img src="images-mas-vendidos/pantalon-lino.webp" alt="Pantalón Ligne de Lino" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Pantalón Ligne de Lino</h3>
                 <p class="text-sm mb-1">Categoría: Pantalones | Talla: L</p>
                 <p class="text-sm">€ 290.00</p>
@@ -212,21 +212,21 @@
             </div>
             <!-- Calzado -->
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/mocasines-premium.webp" alt="Mocasines Premium" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/mocasines-premium.webp" alt="Mocasines Premium" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Mocasines Premium</h3>
                 <p class="text-sm mb-1">Categoría: Calzado | Talla: S</p>
                 <p class="text-sm">€ 135.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images/campaña-2026/botas-minimalistas.webp" alt="Botas Minimalistas" class="w-full h-40 object-cover rounded">
+                <img src="images/campaña-2026/botas-minimalistas.webp" alt="Botas Minimalistas" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Botas Minimalistas</h3>
                 <p class="text-sm mb-1">Categoría: Calzado | Talla: XL</p>
                 <p class="text-sm">€ 145.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
              <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-mas-vendidos/botas-altas.webp" alt="Botas Altas Sofisticadas Cuero Vegano" class="w-full h-40 object-cover rounded">
+                <img src="images-mas-vendidos/botas-altas.webp" alt="Botas Altas Sofisticadas Cuero Vegano" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Botas Altas Sofisticadas Cuero Vegano</h3>
                 <p class="text-sm mb-1">Categoría: Calzado | Talla: XL</p>
                 <p class="text-sm">€ 390.00</p>
@@ -235,14 +235,14 @@
             <!-- Accesorios -->
            
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-nuevos-lanzamientos/bolso-premium.webp" alt="Bolso Etoile Cuero Vegano Premium" class="w-full h-40 object-cover rounded">
+                <img src="images-nuevos-lanzamientos/bolso-premium.webp" alt="Bolso Etoile Cuero Vegano Premium" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Bolso Etoile Cuero Vegano Premium</h3>
                 <p class="text-sm mb-1">Categoría: Accesorios | Talla: No Aplica</p>
                 <p class="text-sm">€ 560.00</p>
                 <button class="mt-2 bg-[#B8ADA1] text-white px-4 py-2 rounded hover:bg-[#6E6A66]">Agregar</button>
             </div>
             <div class="bg-[#FAF8F5] border border-[#B8ADA1] rounded-lg p-4">
-                <img src="images-mas-vendidos/bolso-estructurado.webp" alt="Bolso Estructurado Cuero Vegano" class="w-full h-40 object-cover rounded">
+                <img src="images-mas-vendidos/bolso-estructurado.webp" alt="Bolso Estructurado Cuero Vegano" class="aspect-[1/1] w-full rounded object-cover transition-transform duration-500 ease-out hover:scale-105">
                 <h3 class="text-lg font-serif mt-2">Bolso Estructurado Cuero Vegano</h3>
                 <p class="text-sm mb-1">Categoría: Accesorios | Talla: No Aplica</p>
                 <p class="text-sm">€ 470.00</p>
